@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: e33171d2fd1926a4a8903dd652f498e1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -614221365077718543
+    second: T3 diapositiva3_0
+  - first:
+      213: -2238495756580124581
+    second: T3 diapositiva3_1
+  - first:
+      213: 1458759108274805705
+    second: T3 diapositiva3_2
+  - first:
+      213: -6611369899257014849
+    second: T3 diapositiva3_3
+  - first:
+      213: -8275582314842485989
+    second: T3 diapositiva3_4
+  - first:
+      213: -2494872001516303484
+    second: T3 diapositiva3_5
+  - first:
+      213: 7840122042435561772
+    second: T3 diapositiva3_6
+  - first:
+      213: -8363870567331077267
+    second: T3 diapositiva3_7
+  - first:
+      213: -7631641053260628113
+    second: T3 diapositiva3_8
+  - first:
+      213: 4798584210921228711
+    second: T3 diapositiva3_9
+  - first:
+      213: -9046203283222127008
+    second: T3 diapositiva3_10
+  - first:
+      213: -5754495790879495910
+    second: T3 diapositiva3_11
+  - first:
+      213: 2635412092818644802
+    second: T3 diapositiva3_12
+  - first:
+      213: 3478396516759192632
+    second: T3 diapositiva3_13
+  - first:
+      213: -5283927993295217715
+    second: T3 diapositiva3_14
+  - first:
+      213: -3205363409032609975
+    second: T3 diapositiva3_15
+  - first:
+      213: 2886809713524754314
+    second: T3 diapositiva3_16
+  - first:
+      213: 318773114688420675
+    second: T3 diapositiva3_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: T3 diapositiva3_0
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 701
+        width: 1082
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f946193ce8d977f0800000000000000
+      internalID: -614221365077718543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T3 diapositiva3_1
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 918
+        width: 129
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5882dd28f34fe0e0800000000000000
+      internalID: -2238495756580124581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T3 diapositiva3_2
+      rect:
+        serializedVersion: 2
+        x: 1462
+        y: 952
+        width: 128
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cbd59d1ead8e3410800000000000000
+      internalID: 1458759108274805705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T3 diapositiva3_3
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 834
+        width: 129
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb5531cea12bf34a0800000000000000
+      internalID: -6611369899257014849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T3 diapositiva3_4
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 713
+        width: 120
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1b0f460bb9372d80800000000000000
+      internalID: -8275582314842485989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T3 diapositiva3_5
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 488
+        width: 170
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48b8d8d022f606dd0800000000000000
+      internalID: -2494872001516303484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T3 diapositiva3_6
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 578
+        width: 41
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c29e4177575bdcc60800000000000000
+      internalID: 7840122042435561772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T3 diapositiva3_7
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 534
+        width: 147
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d63e2ee58009deb80800000000000000
+      internalID: -8363870567331077267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T3 diapositiva3_8
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 545
+        width: 110
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6fbc1f65e6f61690800000000000000
+      internalID: -7631641053260628113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T3 diapositiva3_9
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 556
+        width: 155
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a902c47aeef79240800000000000000
+      internalID: 4798584210921228711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T3 diapositiva3_10
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 524
+        width: 143
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06e9291fa0e657280800000000000000
+      internalID: -9046203283222127008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T3 diapositiva3_11
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 595
+        width: 155
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a19a52b119ce320b0800000000000000
+      internalID: -5754495790879495910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T3 diapositiva3_12
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 566
+        width: 289
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24f593dd55dd29420800000000000000
+      internalID: 2635412092818644802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T3 diapositiva3_13
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 283
+        width: 147
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8344361e33fb54030800000000000000
+      internalID: 3478396516759192632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T3 diapositiva3_14
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 264
+        width: 113
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcb55ec4c77bba6b0800000000000000
+      internalID: -5283927993295217715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T3 diapositiva3_15
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 274
+        width: 155
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94f739456f24483d0800000000000000
+      internalID: -3205363409032609975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T3 diapositiva3_16
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 210
+        width: 213
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a874ac4b322001820800000000000000
+      internalID: 2886809713524754314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T3 diapositiva3_17
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 174
+        width: 1081
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34bb2f875728c6400800000000000000
+      internalID: 318773114688420675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      T3 diapositiva3_0: -614221365077718543
+      T3 diapositiva3_1: -2238495756580124581
+      T3 diapositiva3_10: -9046203283222127008
+      T3 diapositiva3_11: -5754495790879495910
+      T3 diapositiva3_12: 2635412092818644802
+      T3 diapositiva3_13: 3478396516759192632
+      T3 diapositiva3_14: -5283927993295217715
+      T3 diapositiva3_15: -3205363409032609975
+      T3 diapositiva3_16: 2886809713524754314
+      T3 diapositiva3_17: 318773114688420675
+      T3 diapositiva3_2: 1458759108274805705
+      T3 diapositiva3_3: -6611369899257014849
+      T3 diapositiva3_4: -8275582314842485989
+      T3 diapositiva3_5: -2494872001516303484
+      T3 diapositiva3_6: 7840122042435561772
+      T3 diapositiva3_7: -8363870567331077267
+      T3 diapositiva3_8: -7631641053260628113
+      T3 diapositiva3_9: 4798584210921228711
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

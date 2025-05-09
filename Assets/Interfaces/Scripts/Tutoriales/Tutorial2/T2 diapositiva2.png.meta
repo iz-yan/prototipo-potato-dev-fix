@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 48e9b93ab0d83654fb20ee8d7b822239
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5676745834333688403
+    second: T2 diapositiva2_0
+  - first:
+      213: 5024321908385908702
+    second: T2 diapositiva2_1
+  - first:
+      213: 4876956002219359462
+    second: T2 diapositiva2_2
+  - first:
+      213: -4444302500299111012
+    second: T2 diapositiva2_3
+  - first:
+      213: -2169099907866625574
+    second: T2 diapositiva2_4
+  - first:
+      213: -556801088320501894
+    second: T2 diapositiva2_5
+  - first:
+      213: 5005656322668480764
+    second: T2 diapositiva2_6
+  - first:
+      213: -1138697297823743705
+    second: T2 diapositiva2_7
+  - first:
+      213: 6630145562852817096
+    second: T2 diapositiva2_8
+  - first:
+      213: -7514686522163307588
+    second: T2 diapositiva2_9
+  - first:
+      213: -6581118205652145030
+    second: T2 diapositiva2_10
+  - first:
+      213: -4814944030233586717
+    second: T2 diapositiva2_11
+  - first:
+      213: -7030923486588956204
+    second: T2 diapositiva2_12
+  - first:
+      213: -772813763051520243
+    second: T2 diapositiva2_13
+  - first:
+      213: -1907355100218134818
+    second: T2 diapositiva2_14
+  - first:
+      213: 5012047267405876193
+    second: T2 diapositiva2_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: T2 diapositiva2_0
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 835
+        width: 114
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35253a7724ad7ce40800000000000000
+      internalID: 5676745834333688403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T2 diapositiva2_1
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 634
+        width: 1224
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed70e8ad72af9b540800000000000000
+      internalID: 5024321908385908702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T2 diapositiva2_2
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 808
+        width: 127
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ec7e7115ad6ea340800000000000000
+      internalID: 4876956002219359462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T2 diapositiva2_3
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 667
+        width: 129
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c958a434c6aa252c0800000000000000
+      internalID: -4444302500299111012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T2 diapositiva2_4
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 590
+        width: 156
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad9f64d402fc5e1e0800000000000000
+      internalID: -2169099907866625574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T2 diapositiva2_5
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 478
+        width: 141
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a770b183c58d548f0800000000000000
+      internalID: -556801088320501894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T2 diapositiva2_6
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 447
+        width: 128
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf8c75487e9a77540800000000000000
+      internalID: 5005656322668480764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T2 diapositiva2_7
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 463
+        width: 193
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 721c48837d88230f0800000000000000
+      internalID: -1138697297823743705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T2 diapositiva2_8
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 240
+        width: 384
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c879fae242030c50800000000000000
+      internalID: 6630145562852817096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T2 diapositiva2_9
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 458
+        width: 194
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbb5a003c6876b790800000000000000
+      internalID: -7514686522163307588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T2 diapositiva2_10
+      rect:
+        serializedVersion: 2
+        x: 1543
+        y: 459
+        width: 151
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7c6f373cdb2ba4a0800000000000000
+      internalID: -6581118205652145030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T2 diapositiva2_11
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 355
+        width: 68
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e31a884ae1ed2db0800000000000000
+      internalID: -4814944030233586717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T2 diapositiva2_12
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 285
+        width: 154
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d11ae227542d6e90800000000000000
+      internalID: -7030923486588956204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T2 diapositiva2_13
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 237
+        width: 207
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0ff7cf1af96645f0800000000000000
+      internalID: -772813763051520243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T2 diapositiva2_14
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 237
+        width: 208
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edee7f654a6b785e0800000000000000
+      internalID: -1907355100218134818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T2 diapositiva2_15
+      rect:
+        serializedVersion: 2
+        x: 1597
+        y: 270
+        width: 115
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ebc13b4f6e5e8540800000000000000
+      internalID: 5012047267405876193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      T2 diapositiva2_0: 5676745834333688403
+      T2 diapositiva2_1: 5024321908385908702
+      T2 diapositiva2_10: -6581118205652145030
+      T2 diapositiva2_11: -4814944030233586717
+      T2 diapositiva2_12: -7030923486588956204
+      T2 diapositiva2_13: -772813763051520243
+      T2 diapositiva2_14: -1907355100218134818
+      T2 diapositiva2_15: 5012047267405876193
+      T2 diapositiva2_2: 4876956002219359462
+      T2 diapositiva2_3: -4444302500299111012
+      T2 diapositiva2_4: -2169099907866625574
+      T2 diapositiva2_5: -556801088320501894
+      T2 diapositiva2_6: 5005656322668480764
+      T2 diapositiva2_7: -1138697297823743705
+      T2 diapositiva2_8: 6630145562852817096
+      T2 diapositiva2_9: -7514686522163307588
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

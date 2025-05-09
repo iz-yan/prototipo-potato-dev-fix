@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Minijuego3.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 14ba76c51e2ae8244bc5d9b61d68a183
+  - enabled: 1
+    path: Assets/Scenes/Mapa.unity
+    guid: e8408b2b526f6364fa8ac3f980b524ea
+  - enabled: 1
+    path: Assets/Scenes/Minijuego1.unity
+    guid: 0b6e55cd703aed64886801b48771ef74
+  - enabled: 1
+    path: Assets/Scenes/Minijuego2.unity
+    guid: 9d81bc8b9cb60d9489c95e1546ede877
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: c4412096c555abf47a58c7a9f148b079
+  - enabled: 1
+    path: Assets/Scenes/Victoria.unity
+    guid: dbd354dc108c3a44ea6e92bce9baea4c
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_UseUCBPForAssetBundles: 0

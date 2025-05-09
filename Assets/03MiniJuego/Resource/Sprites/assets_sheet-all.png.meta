@@ -1,0 +1,615 @@
+fileFormatVersion: 2
+guid: b405841f57624c14ea7b62e65df937fb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1405389850867535731
+    second: assets_sheet-all_0
+  - first:
+      213: -5456394651741413272
+    second: assets_sheet-all_1
+  - first:
+      213: -1062268069625542915
+    second: assets_sheet-all_2
+  - first:
+      213: 3013149693725108303
+    second: assets_sheet-all_3
+  - first:
+      213: 2066710501333532630
+    second: assets_sheet-all_4
+  - first:
+      213: -4594756893219962583
+    second: assets_sheet-all_5
+  - first:
+      213: -7949657555379614918
+    second: assets_sheet-all_6
+  - first:
+      213: -6081913159293924011
+    second: assets_sheet-all_7
+  - first:
+      213: 5150977387610500109
+    second: assets_sheet-all_8
+  - first:
+      213: -1983821266238111282
+    second: assets_sheet-all_9
+  - first:
+      213: -4633433242664049481
+    second: assets_sheet-all_10
+  - first:
+      213: 8228524886844685739
+    second: assets_sheet-all_11
+  - first:
+      213: 1902145565777118566
+    second: assets_sheet-all_12
+  - first:
+      213: -6999051230400956957
+    second: assets_sheet-all_13
+  - first:
+      213: 3611368332515807131
+    second: assets_sheet-all_14
+  - first:
+      213: -1878503162341307196
+    second: assets_sheet-all_15
+  - first:
+      213: 5356746823361820089
+    second: assets_sheet-all_16
+  - first:
+      213: 1647720383490565627
+    second: assets_sheet-all_17
+  - first:
+      213: -3111098181070678563
+    second: assets_sheet-all_18
+  - first:
+      213: -9006358465630503246
+    second: assets_sheet-all_19
+  - first:
+      213: -2366013699185836560
+    second: assets_sheet-all_20
+  - first:
+      213: -7311834957760152892
+    second: assets_sheet-all_21
+  - first:
+      213: 3968396674511078320
+    second: assets_sheet-all_22
+  - first:
+      213: -3739919091315840149
+    second: assets_sheet-all_23
+  - first:
+      213: -8613844080637682139
+    second: assets_sheet-all_24
+  - first:
+      213: 7081280548709937157
+    second: assets_sheet-all_25
+  - first:
+      213: -5282451413758949882
+    second: assets_sheet-all_26
+  - first:
+      213: -2347677839274984356
+    second: assets_sheet-all_27
+  - first:
+      213: 2201965868380654270
+    second: assets_sheet-all_28
+  - first:
+      213: 7244622531506799038
+    second: assets_sheet-all_29
+  - first:
+      213: 3130388397503939347
+    second: assets_sheet-all_30
+  - first:
+      213: -6455145159530096758
+    second: assets_sheet-all_31
+  - first:
+      213: -6439238177690453958
+    second: assets_sheet-all_32
+  - first:
+      213: -8546475187081666928
+    second: assets_sheet-all_33
+  - first:
+      213: 2463246407123207292
+    second: assets_sheet-all_34
+  - first:
+      213: -9033815193290143809
+    second: assets_sheet-all_35
+  - first:
+      213: -725533140914779844
+    second: assets_sheet-all_36
+  - first:
+      213: 8398128381298533854
+    second: assets_sheet-all_37
+  - first:
+      213: -6046892358103131238
+    second: assets_sheet-all_38
+  - first:
+      213: -7284687423064558573
+    second: assets_sheet-all_39
+  - first:
+      213: 7671805352272773830
+    second: assets_sheet-all_40
+  - first:
+      213: 7909217304490518545
+    second: assets_sheet-all_41
+  - first:
+      213: 5575427119269404760
+    second: assets_sheet-all_42
+  - first:
+      213: 3797671807508580942
+    second: assets_sheet-all_43
+  - first:
+      213: 324033929278440194
+    second: assets_sheet-all_44
+  - first:
+      213: -8316270818280173834
+    second: assets_sheet-all_45
+  - first:
+      213: 723944057319339140
+    second: assets_sheet-all_46
+  - first:
+      213: -4910264226756893855
+    second: assets_sheet-all_47
+  - first:
+      213: 2579738819566580396
+    second: assets_sheet-all_48
+  - first:
+      213: -5554803621525269447
+    second: assets_sheet-all_49
+  - first:
+      213: -6485621057858881572
+    second: assets_sheet-all_50
+  - first:
+      213: -6236338024684990206
+    second: assets_sheet-all_51
+  - first:
+      213: 4123117125386450736
+    second: assets_sheet-all_52
+  - first:
+      213: -6657736640657993886
+    second: assets_sheet-all_53
+  - first:
+      213: 7140549026770169205
+    second: assets_sheet-all_54
+  - first:
+      213: 8962688044769208194
+    second: assets_sheet-all_55
+  - first:
+      213: -5946570490586114559
+    second: assets_sheet-all_56
+  - first:
+      213: -690883661376328795
+    second: assets_sheet-all_57
+  - first:
+      213: 3428729845152051856
+    second: assets_sheet-all_58
+  - first:
+      213: -8269478158683331287
+    second: assets_sheet-all_59
+  - first:
+      213: 1620381851668038066
+    second: assets_sheet-all_60
+  - first:
+      213: -5249198314954788962
+    second: assets_sheet-all_61
+  - first:
+      213: 4508731944961445854
+    second: assets_sheet-all_62
+  - first:
+      213: -8922779975448547986
+    second: assets_sheet-all_63
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 20
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: assets_sheet-all_0
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 53
+        width: 5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d80f910706d0f7ce0800000000000000
+      internalID: -1405389850867535731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_sheet-all_1
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 71
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 860ac9439fdf644b0800000000000000
+      internalID: -5456394651741413272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_sheet-all_2
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 165
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df6cabd91d01241f0800000000000000
+      internalID: -1062268069625542915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_sheet-all_8
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 62
+        width: 125
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0ce79a94a2fb7740800000000000000
+      internalID: 5150977387610500109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_sheet-all_9
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 152
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec10300b11d0874e0800000000000000
+      internalID: -1983821266238111282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_sheet-all_10
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 154
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b4e588c30db2bfb0800000000000000
+      internalID: -4633433242664049481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_sheet-all_19
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 85
+        width: 5
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bef24871bcf20380800000000000000
+      internalID: -9006358465630503246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_sheet-all_33
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 53
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09e9e483912d46980800000000000000
+      internalID: -8546475187081666928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_sheet-all_48
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 4
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca23d81d9c21dc320800000000000000
+      internalID: 2579738819566580396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_sheet-all_58
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 4
+        width: 34
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0927113c0ab459f20800000000000000
+      internalID: 3428729845152051856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_sheet-all_60
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 3
+        width: 37
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b1c92d75b0cc7610800000000000000
+      internalID: 1620381851668038066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9efe24da8ab07c847bbc803507c0147a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      assets_sheet-all_0: -1405389850867535731
+      assets_sheet-all_1: -5456394651741413272
+      assets_sheet-all_10: -4633433242664049481
+      assets_sheet-all_11: 8228524886844685739
+      assets_sheet-all_12: 1902145565777118566
+      assets_sheet-all_13: -6999051230400956957
+      assets_sheet-all_14: 3611368332515807131
+      assets_sheet-all_15: -1878503162341307196
+      assets_sheet-all_16: 5356746823361820089
+      assets_sheet-all_17: 1647720383490565627
+      assets_sheet-all_18: -3111098181070678563
+      assets_sheet-all_19: -9006358465630503246
+      assets_sheet-all_2: -1062268069625542915
+      assets_sheet-all_20: -2366013699185836560
+      assets_sheet-all_21: -7311834957760152892
+      assets_sheet-all_22: 3968396674511078320
+      assets_sheet-all_23: -3739919091315840149
+      assets_sheet-all_24: -8613844080637682139
+      assets_sheet-all_25: 7081280548709937157
+      assets_sheet-all_26: -5282451413758949882
+      assets_sheet-all_27: -2347677839274984356
+      assets_sheet-all_28: 2201965868380654270
+      assets_sheet-all_29: 7244622531506799038
+      assets_sheet-all_3: 3013149693725108303
+      assets_sheet-all_30: 3130388397503939347
+      assets_sheet-all_31: -6455145159530096758
+      assets_sheet-all_32: -6439238177690453958
+      assets_sheet-all_33: -8546475187081666928
+      assets_sheet-all_34: 2463246407123207292
+      assets_sheet-all_35: -9033815193290143809
+      assets_sheet-all_36: -725533140914779844
+      assets_sheet-all_37: 8398128381298533854
+      assets_sheet-all_38: -6046892358103131238
+      assets_sheet-all_39: -7284687423064558573
+      assets_sheet-all_4: 2066710501333532630
+      assets_sheet-all_40: 7671805352272773830
+      assets_sheet-all_41: 7909217304490518545
+      assets_sheet-all_42: 5575427119269404760
+      assets_sheet-all_43: 3797671807508580942
+      assets_sheet-all_44: 324033929278440194
+      assets_sheet-all_45: -8316270818280173834
+      assets_sheet-all_46: 723944057319339140
+      assets_sheet-all_47: -4910264226756893855
+      assets_sheet-all_48: 2579738819566580396
+      assets_sheet-all_49: -5554803621525269447
+      assets_sheet-all_5: -4594756893219962583
+      assets_sheet-all_50: -6485621057858881572
+      assets_sheet-all_51: -6236338024684990206
+      assets_sheet-all_52: 4123117125386450736
+      assets_sheet-all_53: -6657736640657993886
+      assets_sheet-all_54: 7140549026770169205
+      assets_sheet-all_55: 8962688044769208194
+      assets_sheet-all_56: -5946570490586114559
+      assets_sheet-all_57: -690883661376328795
+      assets_sheet-all_58: 3428729845152051856
+      assets_sheet-all_59: -8269478158683331287
+      assets_sheet-all_6: -7949657555379614918
+      assets_sheet-all_60: 1620381851668038066
+      assets_sheet-all_61: -5249198314954788962
+      assets_sheet-all_62: 4508731944961445854
+      assets_sheet-all_63: -8922779975448547986
+      assets_sheet-all_7: -6081913159293924011
+      assets_sheet-all_8: 5150977387610500109
+      assets_sheet-all_9: -1983821266238111282
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
