@@ -12,6 +12,7 @@ public class BehavioyrChanchito : MonoBehaviour
     private Rigidbody2D rb;
 
     public int PuntajeChancho { get => puntajeChancho; set => puntajeChancho = value; }
+    public bool IsCaught { get => isCaught; set => isCaught = value; }
 
     private void Start()
     {
@@ -21,7 +22,7 @@ public class BehavioyrChanchito : MonoBehaviour
 
     private void Update()
     {
-        if (isCaught) return;
+        if (IsCaught) return;
 
         timer -= Time.deltaTime;
 
@@ -50,7 +51,7 @@ public class BehavioyrChanchito : MonoBehaviour
 
     public void Catch(Transform manosJugador)
     {
-        isCaught = true;
+        IsCaught = true;
         rb.linearVelocity = Vector2.zero;
         rb.bodyType=RigidbodyType2D.Kinematic;
         transform.SetParent(manosJugador);

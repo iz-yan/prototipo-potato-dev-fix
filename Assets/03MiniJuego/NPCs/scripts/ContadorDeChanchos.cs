@@ -4,20 +4,21 @@ public class ContadorDeChanchos : MonoBehaviour
 {
     private int contadorChanchos = 0;
     [SerializeField] private GameObject npcOculto; 
-    [SerializeField] private string tagChanchitos = "Chanchito"; 
-
+    [SerializeField] private string tagChanchitos = "Chanchito";
+    private BehavioyrChanchito scriptChanchito;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag(tagChanchitos))
         {
-            contadorChanchos++;
-            Debug.Log($"hay:{contadorChanchos}");
-            BehavioyrChanchito scriptChanchito= collision.GetComponent<BehavioyrChanchito>();
-            if (scriptChanchito != null)
+            scriptChanchito = collision.GetComponent<BehavioyrChanchito>();
+            if (scriptChanchito != null && scriptChanchito.IsCaught)
             {
+                contadorChanchos++;
+                Debug.Log($"hay:{contadorChanchos}");
                 PlayerScore.Instance.GanarPuntos(scriptChanchito.PuntajeChancho);
                 VerificarContador();
             }
+            //collision.gameObject.SetActive(false);
         }
     }
 

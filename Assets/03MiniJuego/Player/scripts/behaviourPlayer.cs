@@ -8,6 +8,9 @@ public class behaviourPlayer : MonoBehaviour
     [SerializeField] private LayerMask chanchitoLayer;
     private bool isCarryingChanchito = false;
     private Rigidbody2D Rigidbody2D;
+
+    public bool IsCarryingChanchito { get => isCarryingChanchito; set => isCarryingChanchito = value; }
+
     void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -43,14 +46,14 @@ public class behaviourPlayer : MonoBehaviour
 
     private void TryCatchChanchito()
     {
-        if (isCarryingChanchito) return;
+        if (IsCarryingChanchito) return;
         Collider2D[] nearbyChanchitos = Physics2D.OverlapCircleAll(
             transform.position,
             catchRange,
             chanchitoLayer
         );
         if (nearbyChanchitos.Length == 0) return;
-        isCarryingChanchito = true;
+        IsCarryingChanchito = true;
         foreach (Collider2D chanchito in nearbyChanchitos)
         {
             chanchito.GetComponent<BehavioyrChanchito>().Catch(transform.Find("Manos"));
@@ -67,7 +70,7 @@ public class behaviourPlayer : MonoBehaviour
         if (chanchito != null)
         {
             chanchito.Release();
-            isCarryingChanchito = false;
+            IsCarryingChanchito = false;
         }
     }
 
