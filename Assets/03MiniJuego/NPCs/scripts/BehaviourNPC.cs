@@ -29,7 +29,6 @@ public class BehaviourNPC : MonoBehaviour
     }
 
     [SerializeField] private Pregunta[] preguntas;
-
     void Start()
     {
         for (int i = 0; i < botonesRespuestas.Length; i++)
@@ -39,7 +38,7 @@ public class BehaviourNPC : MonoBehaviour
             botonesRespuestas[i].onClick.AddListener(() => ResponderPregunta(index));
         }
 
-        panelPreguntas.SetActive(false);
+        panelPreguntas.SetActive(false);        
     }
 
     void Update()
@@ -139,6 +138,7 @@ public class BehaviourNPC : MonoBehaviour
 
         for (int i = 0; i < botonesRespuestas.Length; i++)
         {
+            botonesRespuestas[i].interactable = true;
             botonesRespuestas[i].GetComponentInChildren<TMP_Text>().text = preguntas[numPregunta].respuestas[i];
         }
     }
@@ -150,7 +150,7 @@ public class BehaviourNPC : MonoBehaviour
         if (respuestaIndex != preguntas[preguntaActual].respuestaCorrecta)
         {
             Debug.Log("Respuesta incorrecta!");
-            //botonPresionado.interactable = false;
+            botonPresionado.interactable = false;
             botonPresionado.image.color = Color.red;
 
             PlayerScore.Instance.perderVida();

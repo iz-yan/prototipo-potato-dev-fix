@@ -12,6 +12,7 @@ public class behaviourPlayer : MonoBehaviour
     private Rigidbody2D Rigidbody2D;
 
     public bool IsCarryingChanchito { get => isCarryingChanchito; set => isCarryingChanchito = value; }
+    public float Velocidad { get => velocidad; set => velocidad = value; }
 
     void Start()
     {
@@ -43,7 +44,7 @@ public class behaviourPlayer : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Rigidbody2D.MovePosition(Rigidbody2D.position+direccion*velocidad*Time.fixedDeltaTime);
+        Rigidbody2D.MovePosition(Rigidbody2D.position+direccion*Velocidad*Time.fixedDeltaTime);
     }
 
     //para agarrar a los chanchos
