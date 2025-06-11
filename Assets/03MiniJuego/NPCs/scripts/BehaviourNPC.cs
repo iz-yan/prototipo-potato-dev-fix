@@ -150,7 +150,7 @@ public class BehaviourNPC : MonoBehaviour
         if (respuestaIndex != preguntas[preguntaActual].respuestaCorrecta)
         {
             Debug.Log("Respuesta incorrecta!");
-
+            //botonPresionado.interactable = false;
             botonPresionado.image.color = Color.red;
 
             PlayerScore.Instance.perderVida();
