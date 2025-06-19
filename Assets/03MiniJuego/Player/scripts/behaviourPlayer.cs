@@ -22,7 +22,7 @@ public class behaviourPlayer : MonoBehaviour
     void Update()
     {
         direccion=new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical")).normalized;
-        if(direccion.x!=0f) isRunning=true;
+        if(direccion.x!=0f) isRunning=true;//sirven solo para la animacion
         else isRunning=false;
         if (direccion.x < 0f)
         {
@@ -44,7 +44,7 @@ public class behaviourPlayer : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Rigidbody2D.MovePosition(Rigidbody2D.position+direccion*Velocidad*Time.fixedDeltaTime);
+        Rigidbody2D.MovePosition(Rigidbody2D.position*Time.fixedDeltaTime * Velocidad * direccion);
     }
 
     //para agarrar a los chanchos
@@ -84,6 +84,4 @@ public class behaviourPlayer : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, catchRange);
     }
-
-
 }

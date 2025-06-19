@@ -9,7 +9,6 @@ public class BehaviourNPC : MonoBehaviour
     private bool didDialogueStart;
     private int indexLine;
     private int puntosRespuestaCorrecta = 100;
-    [SerializeField] private GameObject npcSiguiente;
     [SerializeField]private GameObject aviso;
     [SerializeField, TextArea(6, 4)] private string[] lineaTexto;
     [SerializeField] private GameObject panelDialogo;
@@ -119,17 +118,10 @@ public class BehaviourNPC : MonoBehaviour
                 panelDialogo.SetActive(false);
                 aviso.SetActive(true);
                 yaPregunto = true;
-                if (npcSiguiente != null)
-                {
-                    npcSiguiente.SetActive(true);
-                }
-                else
-                { 
-                    //Mostrar el logro de nivel completado
-                    AchievementManager.instance.LogroCompletado("nivel2");
+                 //Mostrar el logro de nivel completado
+                 //AchievementManager.instance.LogroCompletado("nivel2");
+                 //SceneManager.LoadScene("Victoria");
 
-                    SceneManager.LoadScene("Victoria");
-                }
             }
         }
     }
