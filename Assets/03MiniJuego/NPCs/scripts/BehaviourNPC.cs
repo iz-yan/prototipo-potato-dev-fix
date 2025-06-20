@@ -83,6 +83,7 @@ public class BehaviourNPC : MonoBehaviour
                                                             // son similares equivalentes al iff y al else;
         StartCoroutine(MostrarLineas());
     }
+
     private IEnumerator MostrarLineas()
     {
         textoDialogo.text=string.Empty;

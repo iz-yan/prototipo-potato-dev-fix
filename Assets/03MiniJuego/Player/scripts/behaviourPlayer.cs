@@ -44,7 +44,7 @@ public class behaviourPlayer : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Rigidbody2D.MovePosition(Rigidbody2D.position*Time.fixedDeltaTime * Velocidad * direccion);
+        Rigidbody2D.MovePosition(Rigidbody2D.position + direccion*Time.deltaTime*velocidad);
     }
 
     //para agarrar a los chanchos
