@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AutoBehaviour : MonoBehaviour
 {
@@ -11,8 +12,8 @@ public class AutoBehaviour : MonoBehaviour
     [SerializeField] private float velocidadVertical = 3f;
 
     [Header("Configuración de Daño")]
-    [SerializeField] private float danioPorFueraDeCarretera = 15f; // Daño por segundo fuera de carretera
-    [SerializeField] private float intervaloDanio = 1f; // Cada cuánto tiempo se aplica el daño
+    [SerializeField] private float danioPorFueraDeCarretera = 15f;
+    [SerializeField] private float intervaloDanio = 1f;
 
     private float velocidadHorizontal;
     private float inputVertical;
@@ -35,6 +36,7 @@ public class AutoBehaviour : MonoBehaviour
         ProcesarEntrada();
         CalcularVelocidad();
         VerificarDanioPorCarretera();
+        VerificarGameOver();
     }
 
     void FixedUpdate()
@@ -86,12 +88,25 @@ public class AutoBehaviour : MonoBehaviour
         }
     }
 
+    private void VerificarGameOver()
+    {
+        if (vida <= 0)
+        {
+            CargarEscenaGameOver();
+        }
+    }
+
+    private void CargarEscenaGameOver()
+    {
+        SceneManager.LoadScene("GameOver");
+    }
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("road"))
         {
             estaEnCarretera = true;
-            tiempoFueraDeCarretera = 0f; // Resetear el contador cuando vuelve a la carretera
+            tiempoFueraDeCarretera = 0f;
         }
     }
 
