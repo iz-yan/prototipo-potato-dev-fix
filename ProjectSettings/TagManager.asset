@@ -26,6 +26,9 @@ TagManager:
   - auto
   - AltoEnNombreDeLaLey
   - obstaculo
+  - identificacionPanel
+  - autoEnemigo
+  - road
   layers:
   - Default
   - TransparentFX

@@ -3,11 +3,16 @@ using System.Collections;
 
 public class SpawnCarEnemies : MonoBehaviour
 {
+    [Header("Spawn Settings")]
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private float spawnInterval = 2f;
     [SerializeField] private Transform initialDestination;
     [SerializeField] private Transform finalDestination;
-    [SerializeField] private float speed = 1f; // Nueva variable de velocidad
+    [SerializeField] private float speed = 1f;
+
+    [Header("Rotation Settings")]
+    [SerializeField] private float defaultRotationY = 0f; // Valor por defecto editable en inspector
+    [SerializeField] private bool useCustomRotation = false; // Toggle para usar rotación personalizada
 
     private void Start()
     {
@@ -37,7 +42,11 @@ public class SpawnCarEnemies : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        GameObject enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+        // Determinar la rotación a usar
+        float rotationY = useCustomRotation ? defaultRotationY : transform.rotation.eulerAngles.y;
+        Quaternion spawnRotation = Quaternion.Euler(0, rotationY, 0);
+
+        GameObject enemy = Instantiate(enemyPrefab, transform.position, spawnRotation);
         StartCoroutine(MoveEnemy(enemy, initialDestination.position, finalDestination.position));
     }
 
@@ -48,7 +57,7 @@ public class SpawnCarEnemies : MonoBehaviour
 
         while (enemy != null && Vector3.Distance(enemy.transform.position, endPos) > 0.1f)
         {
-            float distanceCovered = (Time.time - startTime) * speed; // Ahora usa la variable speed
+            float distanceCovered = (Time.time - startTime) * speed;
             float fractionOfJourney = distanceCovered / journeyLength;
 
             enemy.transform.position = Vector3.Lerp(startPos, endPos, fractionOfJourney);
@@ -61,7 +70,7 @@ public class SpawnCarEnemies : MonoBehaviour
         }
     }
 
-    // Métodos públicos para cambiar parámetros durante el juego si es necesario
+    // Métodos públicos para cambiar parámetros
     public void SetSpawnInterval(float interval)
     {
         spawnInterval = interval;
@@ -78,9 +87,19 @@ public class SpawnCarEnemies : MonoBehaviour
         enemyPrefab = prefab;
     }
 
-    // Nuevo método para ajustar la velocidad
     public void SetSpeed(float newSpeed)
     {
         speed = newSpeed;
+    }
+
+    // Nuevos métodos para controlar la rotación
+    public void SetDefaultRotationY(float rotationY)
+    {
+        defaultRotationY = rotationY;
+    }
+
+    public void ToggleCustomRotation(bool useCustom)
+    {
+        useCustomRotation = useCustom;
     }
 }

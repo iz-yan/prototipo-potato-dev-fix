@@ -4,12 +4,14 @@ public class AreaInterrogacion : MonoBehaviour
 {
     [Header("Configuración")]
     [SerializeField] private string targetTag = "auto"; // Tag del objeto a detectar
+    [SerializeField] private GameObject[] objectsToDestroy; // Array de objetos a destruir
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag(targetTag))
         {
             Debug.Log("Se encuentra en el area de interrogacion");
+            DestroyObjects();
         }
     }
 
@@ -18,6 +20,23 @@ public class AreaInterrogacion : MonoBehaviour
         if (other.CompareTag(targetTag))
         {
             Debug.Log("Ha salido del area de interrogacion");
+        }
+    }
+
+    private void DestroyObjects()
+    {
+        if (objectsToDestroy == null || objectsToDestroy.Length == 0)
+        {
+            Debug.LogWarning("No hay objetos asignados para destruir en el inspector");
+            return;
+        }
+
+        foreach (GameObject obj in objectsToDestroy)
+        {
+            if (obj != null)
+            {
+                Destroy(obj);
+            }
         }
     }
 

@@ -10,10 +10,15 @@ public class AutoBehaviour : MonoBehaviour
     [SerializeField] private float aceleracion = 2f;
     [SerializeField] private float velocidadVertical = 3f;
 
+    [Header("Configuración de Daño")]
+    [SerializeField] private float danioPorFueraDeCarretera = 15f; // Daño por segundo fuera de carretera
+    [SerializeField] private float intervaloDanio = 1f; // Cada cuánto tiempo se aplica el daño
+
     private float velocidadHorizontal;
     private float inputVertical;
     private bool estaAcelerando = false;
-
+    private bool estaEnCarretera = true;
+    private float tiempoFueraDeCarretera = 0f;
     private Rigidbody2D rb;
 
     void Start()
@@ -29,6 +34,7 @@ public class AutoBehaviour : MonoBehaviour
     {
         ProcesarEntrada();
         CalcularVelocidad();
+        VerificarDanioPorCarretera();
     }
 
     void FixedUpdate()
@@ -64,11 +70,44 @@ public class AutoBehaviour : MonoBehaviour
         rb.MovePosition(nuevaPosicion);
     }
 
+    private void VerificarDanioPorCarretera()
+    {
+        if (!estaEnCarretera)
+        {
+            tiempoFueraDeCarretera += Time.deltaTime;
+
+            if (tiempoFueraDeCarretera >= intervaloDanio)
+            {
+                vida -= danioPorFueraDeCarretera;
+                tiempoFueraDeCarretera = 0f;
+                Debug.Log("Fuera de carretera! Vida: " + vida);
+                vida = Mathf.Clamp(vida, 0, 200);
+            }
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("road"))
+        {
+            estaEnCarretera = true;
+            tiempoFueraDeCarretera = 0f; // Resetear el contador cuando vuelve a la carretera
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("road"))
+        {
+            estaEnCarretera = false;
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("obstaculo"))
         {
-            vida -= 20f;
+            vida -= 30f;
             Debug.Log("Colisionó con obstáculo. Vida: " + vida);
             vida = Mathf.Clamp(vida, 0, 200);
         }
