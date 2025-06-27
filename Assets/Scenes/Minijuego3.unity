@@ -24567,7 +24567,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1828160815218324476, guid: 2271edfc9e06d5846b5a8ea1437f5526, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24651,6 +24651,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5127135735150357045, guid: f2fb4114dc34e0142a799e7a4e7e14d6, type: 3}
+      propertyPath: textoPregunta
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5127135735150357045, guid: f2fb4114dc34e0142a799e7a4e7e14d6, type: 3}
+      propertyPath: panelPreguntas
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5127135735150357045, guid: f2fb4114dc34e0142a799e7a4e7e14d6, type: 3}
       propertyPath: 'lineaTexto.Array.data[0]'
       value: "LIONEL: Me contaron que ayudaste a encerrar a los chanchitos. \xA1Buen
         trabajo! \xBFTe anim\xE1s a algo un poco m\xE1s dif\xEDcil?"
@@ -24679,6 +24687,14 @@ PrefabInstance:
     - target: {fileID: 5127135735150357045, guid: f2fb4114dc34e0142a799e7a4e7e14d6, type: 3}
       propertyPath: 'lineaTexto.Array.data[6]'
       value: "LIONEL: Impresionante... Igualmente, \xA1muchas gracias por ayudarme!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5127135735150357045, guid: f2fb4114dc34e0142a799e7a4e7e14d6, type: 3}
+      propertyPath: 'botonesRespuestas.Array.data[0]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5127135735150357045, guid: f2fb4114dc34e0142a799e7a4e7e14d6, type: 3}
+      propertyPath: 'botonesRespuestas.Array.data[1]'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5127135735150357045, guid: f2fb4114dc34e0142a799e7a4e7e14d6, type: 3}
       propertyPath: preguntas.Array.data[0].pregunta
@@ -24714,7 +24730,8 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5127135735150357045, guid: f2fb4114dc34e0142a799e7a4e7e14d6, type: 3}
     m_RemovedGameObjects:
     - {fileID: 5450967701170648488, guid: f2fb4114dc34e0142a799e7a4e7e14d6, type: 3}
     m_AddedGameObjects:
@@ -24726,7 +24743,7 @@ PrefabInstance:
       addedObject: {fileID: 708794540}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 762432545615551734, guid: f2fb4114dc34e0142a799e7a4e7e14d6, type: 3}
-      insertIndex: 5
+      insertIndex: 4
       addedObject: {fileID: 7272797335767808428}
   m_SourcePrefab: {fileID: 100100000, guid: f2fb4114dc34e0142a799e7a4e7e14d6, type: 3}
 --- !u!1 &7272797335767808427 stripped
@@ -24754,6 +24771,7 @@ MonoBehaviour:
   - 'tomas: muy bien gracias por preguntar.'
   parrafosDeDialogoFinal:
   - 'Granjero: es hora de decir adios, amigo.'
+  - "Tomas: Adios, gracias por todo se\xF1or."
   - "Tomas: Adios, gracias por todo se\xF1or."
   panelParrafos: {fileID: 7272797335767808430}
   textoTMP: {fileID: 7272797335767808429}

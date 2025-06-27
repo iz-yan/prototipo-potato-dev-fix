@@ -3,6 +3,8 @@ using UnityEngine.Rendering;
 using System.Collections;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System;
 public class DialogoConNpc : MonoBehaviour
 {
     //Variables de Parrafos
@@ -12,6 +14,7 @@ public class DialogoConNpc : MonoBehaviour
     [SerializeField, TextArea(6, 4)] private string[] parrafosDeDialogoFinal;
     [SerializeField] GameObject panelParrafos;
     [SerializeField] TMP_Text textoTMP;
+    private string[] dialogoActual;
     private int indexParrafo=0;
 
     [Header("Imagenes y Colores")]
@@ -26,21 +29,14 @@ public class DialogoConNpc : MonoBehaviour
     private bool npcHabla;
     private bool isEnd=false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
         if (isPlayer && Input.GetKeyDown(KeyCode.Space))
         {
-            ElegirDialogo(parrafosDeDialogo);
-            if (isEnd)
-            {
-                ElegirDialogo(parrafosDeDialogoFinal);
-            }
+            dialogoActual = isEnd ? parrafosDeDialogoFinal : parrafosDeDialogo;
+            ElegirDialogo(dialogoActual);
         }
     }
 
@@ -53,7 +49,7 @@ public class DialogoConNpc : MonoBehaviour
         {
             EmpezarDialogo(parrafo);
         }
-        else if (textoTMP.text == parrafosDeDialogo[indexParrafo])
+        else if (textoTMP.text == parrafo[indexParrafo])
         {
             SiguienteParrafo(parrafo);
         }
@@ -80,9 +76,17 @@ public class DialogoConNpc : MonoBehaviour
         else
         {
             panelParrafos.SetActive(false);
-            isEnd = true;
-            isDialogueStart=false;
+            isDialogueStart = false;
             indexParrafo = 0;
+            if (isEnd)
+            {
+                Debug.Log("ADiosssssSSS");
+                
+                SceneManager.LoadScene("Victoria");
+                //AchievementManager.instance.LogroCompletado("nivel2");
+            }
+            isEnd = true;
+            
         }
     }
 

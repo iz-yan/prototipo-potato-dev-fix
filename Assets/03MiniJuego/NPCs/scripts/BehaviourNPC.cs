@@ -120,8 +120,8 @@ public class BehaviourNPC : MonoBehaviour
                 aviso.SetActive(true);
                 yaPregunto = true;
                  //Mostrar el logro de nivel completado
-                 //AchievementManager.instance.LogroCompletado("nivel2");
-                 //SceneManager.LoadScene("Victoria");
+                 AchievementManager.instance.LogroCompletado("nivel2");
+                 SceneManager.LoadScene("Victoria");
 
             }
         }

@@ -64,7 +64,8 @@ public class BehavioyrChanchito : MonoBehaviour
         isCaught = true;
         transform.SetParent(null);
         GetComponent<Collider2D>().enabled = true;
-        rb.bodyType = RigidbodyType2D.Dynamic;
-        rb.linearVelocity=Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
+        rb.bodyType = RigidbodyType2D.Kinematic;
+        transform.localPosition = transform.localPosition;
     }
 }
