@@ -23,6 +23,9 @@ TagManager:
   - item-metal
   - contenedor-metal
   - Chanchito
+  - Animal
+  - Vaca
+  - Pollo
   layers:
   - Default
   - TransparentFX
@@ -31,7 +34,7 @@ TagManager:
   - Water
   - UI
   - Chanchitos
-  - 
+  - Animales
   - 
   - 
   - 

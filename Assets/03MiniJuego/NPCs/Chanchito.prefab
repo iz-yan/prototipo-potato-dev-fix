@@ -12,14 +12,14 @@ GameObject:
   - component: {fileID: 3025163409945064263}
   - component: {fileID: 4841476167783440646}
   - component: {fileID: 2930077876382230019}
-  - component: {fileID: 2110732276853904773}
-  m_Layer: 6
+  - component: {fileID: 3152844017086736998}
+  m_Layer: 7
   m_Name: Chanchito
   m_TagString: Chanchito
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &301111123862605317
 Transform:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2110732276853904773
+--- !u!114 &3152844017086736998
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,8 +172,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1828160815218324476}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6dec54cf8d4cbe4282467a50c98712d, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f31b052fb47c4e448c67708d594dd1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  changeDirectionTime: 1
+  moveSpeed: 2
+  changeDirectionTime: 3
+  puntaje: 50

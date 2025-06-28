@@ -78,14 +78,19 @@ public class DialogoConNpc : MonoBehaviour
             panelParrafos.SetActive(false);
             isDialogueStart = false;
             indexParrafo = 0;
-            if (isEnd)
+            if (!isEnd)
             {
-                Debug.Log("ADiosssssSSS");
                 
-                SceneManager.LoadScene("Victoria");
+                isPlayer=false;
+                aviso.SetActive(false);
                 //AchievementManager.instance.LogroCompletado("nivel2");
             }
-            isEnd = true;
+            else
+            {
+                Debug.Log("ADiosssssSSS");
+                SceneManager.LoadScene("Victoria");
+            }
+                isEnd = true;
             
         }
     }

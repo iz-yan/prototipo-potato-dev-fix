@@ -7,7 +7,7 @@ public class BehaviourCartel : MonoBehaviour
     [SerializeField,TextArea(3,3)] private string[] textoCartel;
     [SerializeField] private TMP_Text letrasDelCartel;
     [SerializeField] private GameObject panel;
-    [SerializeField] private GameObject[] chanchitosArray;
+    [SerializeField] private GameObject[] animalesArray;
     private bool isPlayer;
     private bool didDialogueStart=false;
     private int indexLine;
@@ -63,9 +63,9 @@ public class BehaviourCartel : MonoBehaviour
                 didDialogueStart = false;
                 panel.SetActive(false);
                 gameObject.SetActive(false);//desactivo la caja ostias
-                foreach (GameObject chanchos in chanchitosArray)
+                foreach (GameObject animal in animalesArray)
                 {
-                    chanchos.SetActive(true);
+                    animal.SetActive(true);
                 }
             }
         }
