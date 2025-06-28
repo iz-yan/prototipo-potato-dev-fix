@@ -30,6 +30,7 @@ public class CercaPollos : MonoBehaviour
     }
     public bool CercaLlena()
     {
+        Debug.Log("Pollos estaLLena");
         return EstaLlenaPollos = GameObject.FindGameObjectsWithTag("Pollo").Length == 0;
     }
 }

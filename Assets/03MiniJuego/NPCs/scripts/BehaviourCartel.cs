@@ -11,6 +11,9 @@ public class BehaviourCartel : MonoBehaviour
     private bool isPlayer;
     private bool didDialogueStart=false;
     private int indexLine;
+    private bool animalesLiberados=false;
+
+    public bool AnimalesLiberados { get => animalesLiberados; set => animalesLiberados = value; }
 
     void Update()
     {
@@ -67,6 +70,8 @@ public class BehaviourCartel : MonoBehaviour
                 {
                     animal.SetActive(true);
                 }
+                GetComponent<Collider2D>().enabled = false;
+                animalesLiberados=true;
             }
         }
     }

@@ -69,4 +69,8 @@ public abstract class Animal : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Dynamic;
         transform.localPosition = transform.position;
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        PickNewDirection();
+    }
 }

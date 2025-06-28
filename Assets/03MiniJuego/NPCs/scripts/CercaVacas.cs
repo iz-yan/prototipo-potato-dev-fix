@@ -31,6 +31,7 @@ public class CercaVacas : MonoBehaviour
     }
     public bool CercaLlena()
     {
+        Debug.Log("Vaca estaLLena");
         return EstaLlenaVacas = GameObject.FindGameObjectsWithTag("Vaca").Length == 0;
     }
 }

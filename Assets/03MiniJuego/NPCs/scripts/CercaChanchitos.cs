@@ -30,6 +30,7 @@ public class CercaChanchitos : MonoBehaviour
     }
     public bool CercaLlena()
     {
+        Debug.Log("Chanchitos esta LLena");
         return estaLlenachanchitos = GameObject.FindGameObjectsWithTag("Chanchito").Length == 0;
     }
 }

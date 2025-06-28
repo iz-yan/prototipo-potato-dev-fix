@@ -10,24 +10,31 @@ public class DialogoConNpc : MonoBehaviour
     //Variables de Parrafos
     [Header("Elementos De Dialogo")]
     [SerializeField] private GameObject aviso;
-    [SerializeField, TextArea(6,4)] private string[] parrafosDeDialogo;
+    [SerializeField, TextArea(6, 4)] private string[] parrafosDeDialogo;
     [SerializeField, TextArea(6, 4)] private string[] parrafosDeDialogoFinal;
     [SerializeField] GameObject panelParrafos;
     [SerializeField] TMP_Text textoTMP;
     private string[] dialogoActual;
-    private int indexParrafo=0;
+    private int indexParrafo = 0;
 
     [Header("Imagenes y Colores")]
     [SerializeField] private Image playerImage;
     [SerializeField] private Image npcImage;
-    [SerializeField] private Color colorActivo= Color.white;
-    [SerializeField] private Color colorInactivo=new Color(0.7f, 0.7f, 0.7f, 0.5f);
-    
+    [SerializeField] private Color colorActivo = Color.white;
+    [SerializeField] private Color colorInactivo = new Color(0.7f, 0.7f, 0.7f, 0.5f);
+
+    [Header("Sistema de Preguntas")]
+    [SerializeField] private SistemaPreguntas sistemaPreguntas;
+    [SerializeField] private PreguntaMatematica[] preguntasMatematicas;
+    private bool esperandoRespuesta = false;
     //variables con el PJ
-    private bool isPlayer=false;
-    private bool isDialogueStart=false;
+    private bool isPlayer = false;
+    private bool isDialogueStart = false;
     private bool npcHabla;
-    private bool isEnd=false;
+    private bool isEnd = false;
+
+    public bool IsEnd { get => isEnd; set => isEnd = value; }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     // Update is called once per frame
@@ -35,7 +42,7 @@ public class DialogoConNpc : MonoBehaviour
     {
         if (isPlayer && Input.GetKeyDown(KeyCode.Space))
         {
-            dialogoActual = isEnd ? parrafosDeDialogoFinal : parrafosDeDialogo;
+            dialogoActual = IsEnd ? parrafosDeDialogoFinal : parrafosDeDialogo;
             ElegirDialogo(dialogoActual);
         }
     }
@@ -66,39 +73,74 @@ public class DialogoConNpc : MonoBehaviour
 
     public void SiguienteParrafo(string[] parrafos)
     {
+        if (esperandoRespuesta) return;
+
         if (indexParrafo < parrafos.Length - 1)
         {
             indexParrafo++;
-            StartCoroutine(MostrarLineas(parrafos));
-            npcHabla = (indexParrafo % 2 == 0);//en indices pares el npc toma color y en los impares el player
-            CambiarEnfoque(npcHabla);
+
+            // Verificar si este párrafo debe mostrar pregunta
+            if (indexParrafo == 2) // Ejemplo: tercera línea muestra pregunta
+            {
+                MostrarPregunta();
+            }
+            else
+            {
+                StartCoroutine(MostrarLineas(parrafos));
+                npcHabla = (indexParrafo % 2 == 0);
+                CambiarEnfoque(npcHabla);
+            }
         }
         else
         {
             panelParrafos.SetActive(false);
             isDialogueStart = false;
             indexParrafo = 0;
-            if (!isEnd)
+
+            if (!IsEnd)
             {
-                
-                isPlayer=false;
+                isPlayer = false;
                 aviso.SetActive(false);
-                //AchievementManager.instance.LogroCompletado("nivel2");
             }
             else
             {
-                Debug.Log("ADiosssssSSS");
                 SceneManager.LoadScene("Victoria");
             }
-                isEnd = true;
-            
+            IsEnd = true;
         }
     }
 
+
+
+    private void MostrarPregunta()
+    {
+        if (sistemaPreguntas == null || preguntasMatematicas.Length == 0) return;
+
+        // Seleccionar pregunta aleatoria o en orden
+        int preguntaIndex = UnityEngine.Random.Range(0, preguntasMatematicas.Length);
+
+        esperandoRespuesta = true;
+        sistemaPreguntas.MostrarPregunta(preguntaIndex, (esCorrecta) =>
+        {
+            esperandoRespuesta = false;
+            if (esCorrecta)
+            {
+                // Respuesta correcta
+                PlayerScore.Instance.GanarPuntos(10);
+                StartCoroutine(MostrarLineas(dialogoActual));
+            }
+            else
+            {
+                // Respuesta incorrecta
+                PlayerScore.Instance.perderVida();
+                StartCoroutine(MostrarLineas(dialogoActual));
+            }
+        });
+    }
     public void CambiarEnfoque(bool estaNpcHablando)
     {
-        npcImage.color=estaNpcHablando? colorActivo:colorInactivo;
-        playerImage.color=estaNpcHablando? colorInactivo:colorActivo;
+        npcImage.color = estaNpcHablando ? colorActivo : colorInactivo;
+        playerImage.color = estaNpcHablando ? colorInactivo : colorActivo;
     }
 
     private IEnumerator MostrarLineas(string[] parrafos)
