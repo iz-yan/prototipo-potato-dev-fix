@@ -5,9 +5,9 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
+
 public class DialogoConNpc : MonoBehaviour
 {
-    //Variables de Parrafos
     [Header("Elementos De Dialogo")]
     [SerializeField] private GameObject aviso;
     [SerializeField, TextArea(6, 4)] private string[] parrafosDeDialogo;
@@ -27,7 +27,7 @@ public class DialogoConNpc : MonoBehaviour
     [SerializeField] private SistemaPreguntas sistemaPreguntas;
     [SerializeField] private PreguntaMatematica[] preguntasMatematicas;
     private bool esperandoRespuesta = false;
-    //variables con el PJ
+
     private bool isPlayer = false;
     private bool isDialogueStart = false;
     private bool npcHabla;
@@ -35,9 +35,14 @@ public class DialogoConNpc : MonoBehaviour
 
     public bool IsEnd { get => isEnd; set => isEnd = value; }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        if (sistemaPreguntas != null && preguntasMatematicas.Length > 0)
+        {
+            sistemaPreguntas.ConfigurarPreguntas(preguntasMatematicas);
+        }
+    }
 
-    // Update is called once per frame
     void Update()
     {
         if (isPlayer && Input.GetKeyDown(KeyCode.Space))
@@ -46,9 +51,6 @@ public class DialogoConNpc : MonoBehaviour
             ElegirDialogo(dialogoActual);
         }
     }
-
-
-
 
     public void ElegirDialogo(string[] parrafo)
     {
@@ -79,9 +81,14 @@ public class DialogoConNpc : MonoBehaviour
         {
             indexParrafo++;
 
-            // Verificar si este párrafo debe mostrar pregunta
-            if (indexParrafo == 2) // Ejemplo: tercera línea muestra pregunta
+            if (indexParrafo == 2) // Pregunta en la tercera línea
             {
+                panelParrafos.SetActive(false); // Desactiva panel de diálogo
+                MostrarPregunta();
+            }
+            else if (indexParrafo == 4) // Pregunta en la quinta línea
+            {
+                panelParrafos.SetActive(false); // Desactiva panel de diálogo
                 MostrarPregunta();
             }
             else
@@ -93,50 +100,48 @@ public class DialogoConNpc : MonoBehaviour
         }
         else
         {
-            panelParrafos.SetActive(false);
-            isDialogueStart = false;
-            indexParrafo = 0;
-
-            if (!IsEnd)
-            {
-                isPlayer = false;
-                aviso.SetActive(false);
-            }
-            else
-            {
-                SceneManager.LoadScene("Victoria");
-            }
-            IsEnd = true;
+            FinalizarDialogo();
         }
     }
 
+    private void FinalizarDialogo()
+    {
+        panelParrafos.SetActive(false);
+        isDialogueStart = false;
+        indexParrafo = 0;
 
+        if (!IsEnd)
+        {
+            isPlayer = false;
+            aviso.SetActive(false);
+        }
+        else
+        {
+            SceneManager.LoadScene("Victoria");
+        }
+        IsEnd = true;
+    }
 
     private void MostrarPregunta()
     {
         if (sistemaPreguntas == null || preguntasMatematicas.Length == 0) return;
 
-        // Seleccionar pregunta aleatoria o en orden
         int preguntaIndex = UnityEngine.Random.Range(0, preguntasMatematicas.Length);
-
         esperandoRespuesta = true;
+
         sistemaPreguntas.MostrarPregunta(preguntaIndex, (esCorrecta) =>
         {
-            esperandoRespuesta = false;
             if (esCorrecta)
             {
-                // Respuesta correcta
                 PlayerScore.Instance.GanarPuntos(10);
+                panelParrafos.SetActive(true); // Reactiva panel de diálogo
                 StartCoroutine(MostrarLineas(dialogoActual));
+                esperandoRespuesta = false;
             }
-            else
-            {
-                // Respuesta incorrecta
-                PlayerScore.Instance.perderVida();
-                StartCoroutine(MostrarLineas(dialogoActual));
-            }
+            // Si es incorrecta, no hacemos nada (el sistema mantiene la pregunta visible)
         });
     }
+
     public void CambiarEnfoque(bool estaNpcHablando)
     {
         npcImage.color = estaNpcHablando ? colorActivo : colorInactivo;
@@ -158,8 +163,16 @@ public class DialogoConNpc : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             aviso.SetActive(true);
-            Debug.Log("Estoy");
             isPlayer = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            aviso.SetActive(false);
+            isPlayer = false;
         }
     }
 }

@@ -8152,8 +8152,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 808, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 755.0884, y: -26.955}
+  m_SizeDelta: {x: 270, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &294035809
 MonoBehaviour:
@@ -10640,8 +10640,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 808, y: -119}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 755.09, y: -143.9583}
+  m_SizeDelta: {x: 270, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &549239228
 PrefabInstance:
@@ -10964,7 +10964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -12143,7 +12143,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 762432545615551734, guid: f2fb4114dc34e0142a799e7a4e7e14d6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2189912572546205066, guid: f2fb4114dc34e0142a799e7a4e7e14d6, type: 3}
       propertyPath: m_SizeDelta.x
@@ -17093,7 +17093,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -84.4906, y: -428.9101}
+  m_AnchoredPosition: {x: -84.4906, y: -153}
   m_SizeDelta: {x: 713.5706, y: 79.8202}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1224772555
@@ -18799,6 +18799,8 @@ MonoBehaviour:
   - hola
   - hola
   - chau
+  - chau
+  - queiro pan
   parrafosDeDialogoFinal:
   - adio compa
   panelParrafos: {fileID: 1923046926}
@@ -18810,10 +18812,15 @@ MonoBehaviour:
   sistemaPreguntas: {fileID: 2020944331}
   preguntasMatematicas:
   - enunciado: 2+2
-    respuestaCorrecta: 4
+    respuestaCorrecta: 0
     opcionesRespuesta:
     - 4
-    - 7
+    - 17
+  - enunciado: 6+3
+    respuestaCorrecta: 1
+    opcionesRespuesta:
+    - 20
+    - 9
 --- !u!1 &1409304016
 GameObject:
   m_ObjectHideFlags: 0
@@ -25283,17 +25290,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980b48a5722c84c47b7de458ebbef855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preguntas:
-  - enunciado: 2+2
-    respuestaCorrecta: 4
-    opcionesRespuesta:
-    - 4
-    - 7
+  preguntas: []
   panelPregunta: {fileID: 581238421}
   textoPregunta: {fileID: 1224772556}
   botonesRespuesta:
   - {fileID: 294035811}
   - {fileID: 535361233}
+  colorCorrecto: {r: 0, g: 1, b: 0, a: 1}
+  colorIncorrecto: {r: 1, g: 0, b: 0, a: 1}
+  colorNormal: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &2020944332
 Transform:
   m_ObjectHideFlags: 0
@@ -26310,11 +26315,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5448851827804535357, guid: 6534cbc0eb3da40418cde4a7fc6c1ce3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.98
+      value: 5.22
       objectReference: {fileID: 0}
     - target: {fileID: 5448851827804535357, guid: 6534cbc0eb3da40418cde4a7fc6c1ce3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.84
+      value: -1.25
       objectReference: {fileID: 0}
     - target: {fileID: 5448851827804535357, guid: 6534cbc0eb3da40418cde4a7fc6c1ce3, type: 3}
       propertyPath: m_LocalPosition.z
