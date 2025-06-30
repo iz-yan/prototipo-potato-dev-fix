@@ -6,8 +6,11 @@ public class BehaviourCartel : MonoBehaviour
 {
     [SerializeField,TextArea(3,3)] private string[] textoCartel;
     [SerializeField] private TMP_Text letrasDelCartel;
+    [SerializeField] private TMP_Text contador;
     [SerializeField] private GameObject panel;
     [SerializeField] private GameObject[] animalesArray;
+    [SerializeField] private GameObject señal;
+    [SerializeField] private GameObject avisoProximidad;
     private bool isPlayer;
     private bool didDialogueStart=false;
     private int indexLine;
@@ -27,11 +30,11 @@ public class BehaviourCartel : MonoBehaviour
             {
                 SiguienteLinea();
             }
-            else
-            {
-                StopAllCoroutines();
-                letrasDelCartel.text = textoCartel[indexLine];
-            }
+            //else
+            //{
+            //    StopAllCoroutines();
+            //    letrasDelCartel.text = textoCartel[indexLine];
+            //}
         }
     }
 
@@ -65,20 +68,47 @@ public class BehaviourCartel : MonoBehaviour
             {
                 didDialogueStart = false;
                 panel.SetActive(false);
-                gameObject.SetActive(false);//desactivo la caja ostias
-                foreach (GameObject animal in animalesArray)
-                {
-                    animal.SetActive(true);
-                }
+                //StartCoroutine(ContadorRegresivo());
                 GetComponent<Collider2D>().enabled = false;
-                animalesLiberados=true;
+                isPlayer = false;  // Esto evita que el Update reaccione al Space
+                avisoProximidad.SetActive(false);
+                StartCoroutine(ContadorRegresivo());
             }
         }
     }
+
+    private IEnumerator ContadorRegresivo()
+    {
+        contador.gameObject.SetActive(true);
+        // Mostrar "3"
+        contador.text = "3";
+        yield return new WaitForSeconds(1f);
+
+        // Mostrar "2"
+        contador.text = "2";
+        yield return new WaitForSeconds(1f);
+
+        // Mostrar "1"
+        contador.text = "1";
+        yield return new WaitForSeconds(1f);
+
+        contador.text = "¡GO!";
+        foreach (GameObject animal in animalesArray)
+        {
+            animal.SetActive(true);
+        }
+        yield return new WaitForSeconds(0.5f);
+        contador.gameObject.SetActive(false);
+        animalesLiberados = true;
+        gameObject.SetActive(false);//desactivo la caja ostias
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
+            avisoProximidad.SetActive(true);
+            señal.SetActive(false);
             isPlayer = true;
             Debug.Log("abremeee!!!!");
         }
@@ -87,6 +117,8 @@ public class BehaviourCartel : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            avisoProximidad.SetActive(false);
+            señal.SetActive(true);
             isPlayer = false;
             Debug.Log("NoooooMECIERRREEEsssss!!!!");
         }

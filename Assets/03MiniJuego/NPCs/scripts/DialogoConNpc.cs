@@ -4,18 +4,15 @@ using System.Collections;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System;
 
 public class DialogoConNpc : MonoBehaviour
 {
     [Header("Elementos De Dialogo")]
     [SerializeField] private GameObject aviso;
-    [SerializeField, TextArea(6, 4)] private string[] parrafosDeDialogo;
-    [SerializeField, TextArea(6, 4)] private string[] parrafosDeDialogoFinal;
+    [SerializeField] private GameObject avisoProximidad;
+    [SerializeField, TextArea(6, 4)] private string[] parrafosDeDialogo; // Solo este array ahora
     [SerializeField] GameObject panelParrafos;
     [SerializeField] TMP_Text textoTMP;
-    private string[] dialogoActual;
-    private int indexParrafo = 0;
 
     [Header("Imagenes y Colores")]
     [SerializeField] private Image playerImage;
@@ -31,9 +28,7 @@ public class DialogoConNpc : MonoBehaviour
     private bool isPlayer = false;
     private bool isDialogueStart = false;
     private bool npcHabla;
-    private bool isEnd = false;
-
-    public bool IsEnd { get => isEnd; set => isEnd = value; }
+    private int indexParrafo = 0;
 
     void Start()
     {
@@ -47,79 +42,51 @@ public class DialogoConNpc : MonoBehaviour
     {
         if (isPlayer && Input.GetKeyDown(KeyCode.Space))
         {
-            dialogoActual = IsEnd ? parrafosDeDialogoFinal : parrafosDeDialogo;
-            ElegirDialogo(dialogoActual);
+            if (!isDialogueStart)
+            {
+                EmpezarDialogo();
+            }
+            else if (textoTMP.text == parrafosDeDialogo[indexParrafo])
+            {
+                SiguienteParrafo();
+            }
         }
     }
 
-    public void ElegirDialogo(string[] parrafo)
-    {
-        if (!isDialogueStart)
-        {
-            EmpezarDialogo(parrafo);
-        }
-        else if (textoTMP.text == parrafo[indexParrafo])
-        {
-            SiguienteParrafo(parrafo);
-        }
-    }
-
-    public void EmpezarDialogo(string[] parrafos)
+    public void EmpezarDialogo()
     {
         panelParrafos.SetActive(true);
         aviso.SetActive(false);
-        StartCoroutine(MostrarLineas(parrafos));
+        StartCoroutine(MostrarLineas());
         isDialogueStart = true;
         CambiarEnfoque(true);
     }
 
-    public void SiguienteParrafo(string[] parrafos)
+    public void SiguienteParrafo()
     {
         if (esperandoRespuesta) return;
 
-        if (indexParrafo < parrafos.Length - 1)
+        if (indexParrafo < parrafosDeDialogo.Length - 1)
         {
             indexParrafo++;
 
-            if (indexParrafo == 2) // Pregunta en la tercera línea
+            if (indexParrafo == 2 || indexParrafo == 4) // Preguntas en líneas específicas
             {
-                panelParrafos.SetActive(false); // Desactiva panel de diálogo
-                MostrarPregunta();
-            }
-            else if (indexParrafo == 4) // Pregunta en la quinta línea
-            {
-                panelParrafos.SetActive(false); // Desactiva panel de diálogo
+                panelParrafos.SetActive(false);
                 MostrarPregunta();
             }
             else
             {
-                StartCoroutine(MostrarLineas(parrafos));
+                StartCoroutine(MostrarLineas());
                 npcHabla = (indexParrafo % 2 == 0);
                 CambiarEnfoque(npcHabla);
             }
         }
-        else
+        else // Al terminar el diálogo, carga la escena
         {
-            FinalizarDialogo();
-        }
-    }
-
-    private void FinalizarDialogo()
-    {
-        panelParrafos.SetActive(false);
-        isDialogueStart = false;
-        indexParrafo = 0;
-
-        if (!IsEnd)
-        {
-            isPlayer = false;
-            aviso.SetActive(false);
-        }
-        else
-        {
+            panelParrafos.SetActive(false);
             SceneManager.LoadScene("Victoria");
         }
-        IsEnd = true;
     }
 
     private void MostrarPregunta()
@@ -134,11 +101,12 @@ public class DialogoConNpc : MonoBehaviour
             if (esCorrecta)
             {
                 PlayerScore.Instance.GanarPuntos(10);
-                panelParrafos.SetActive(true); // Reactiva panel de diálogo
-                StartCoroutine(MostrarLineas(dialogoActual));
+                panelParrafos.SetActive(true);
+                npcHabla = (indexParrafo % 2 == 0);
+                CambiarEnfoque(npcHabla);
+                StartCoroutine(MostrarLineas());
                 esperandoRespuesta = false;
             }
-            // Si es incorrecta, no hacemos nada (el sistema mantiene la pregunta visible)
         });
     }
 
@@ -146,12 +114,13 @@ public class DialogoConNpc : MonoBehaviour
     {
         npcImage.color = estaNpcHablando ? colorActivo : colorInactivo;
         playerImage.color = estaNpcHablando ? colorInactivo : colorActivo;
+        panelParrafos.GetComponent<Image>().color = Color.white;
     }
 
-    private IEnumerator MostrarLineas(string[] parrafos)
+    private IEnumerator MostrarLineas()
     {
         textoTMP.text = string.Empty;
-        foreach (char c in parrafos[indexParrafo])
+        foreach (char c in parrafosDeDialogo[indexParrafo])
         {
             textoTMP.text += c;
             yield return new WaitForSeconds(0.05f);
@@ -163,6 +132,7 @@ public class DialogoConNpc : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             aviso.SetActive(true);
+            if (avisoProximidad != null) avisoProximidad.SetActive(false);
             isPlayer = true;
         }
     }
@@ -172,6 +142,7 @@ public class DialogoConNpc : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             aviso.SetActive(false);
+            if (avisoProximidad != null) avisoProximidad.SetActive(false);
             isPlayer = false;
         }
     }
