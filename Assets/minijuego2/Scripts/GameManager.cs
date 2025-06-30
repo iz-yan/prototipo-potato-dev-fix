@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     private int puntosTotales;
     public GameObject[] confettis; //confetti
     public Transform[] posicionesConfetti;//confetti
+    public GameObject particulasDestruccion;// explosion
     public int Vidas { get; private set; } = 5;
 
     private bool yaGano = false;
@@ -77,8 +78,22 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+    public void LimpiarComida()
+    {
+        GameObject[] comidas = GameObject.FindGameObjectsWithTag("comida");
+        foreach (GameObject comida in comidas)
+        {
+            // Instanciar partículas en la posición de la comida
+            if (particulasDestruccion != null)
+            {
+                Instantiate(particulasDestruccion, comida.transform.position, Quaternion.identity);
+            }
+            Destroy(comida);
+        }
+    }
     private IEnumerator CargarEscenaConDelay(string nombreEscena, float delay)
     {
+        LimpiarComida(); // Limpia toda la comida antes de cambiar de escena
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(nombreEscena);
     }

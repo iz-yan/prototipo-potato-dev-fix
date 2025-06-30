@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1006701358486911711}
   m_Layer: 0
   m_Name: DORITO
-  m_TagString: Untagged
+  m_TagString: comida
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -176,3 +176,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sonidoChoque: {fileID: 8300000, guid: 2157806402b84d64b86d00b9440d496a, type: 3}
+  rotationSpeed: 80

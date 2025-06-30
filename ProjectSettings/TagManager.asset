@@ -23,6 +23,7 @@ TagManager:
   - item-metal
   - contenedor-metal
   - Chanchito
+  - comida
   layers:
   - Default
   - TransparentFX

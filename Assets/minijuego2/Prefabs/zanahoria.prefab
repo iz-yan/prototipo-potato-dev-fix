@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7542657187439249377}
   m_Layer: 0
   m_Name: zanahoria
-  m_TagString: Untagged
+  m_TagString: comida
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,3 +177,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   valor: 1
   sonidoComida: {fileID: 8300000, guid: cb95ab9ddecdc9542b6d6c4153f49bb2, type: 3}
+  rotationSpeed: 60
