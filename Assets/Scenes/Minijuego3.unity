@@ -13113,6 +13113,11 @@ PrefabInstance:
       propertyPath: cameraTargetPosition
       value: 
       objectReference: {fileID: 1572094081}
+    - target: {fileID: 6942500759896768525, guid: f2fb4114dc34e0142a799e7a4e7e14d6, type: 3}
+      propertyPath: preguntasMatematicas.Array.data[3].enunciado
+      value: "El chancho Pepito ten\xEDa 8 zanahorias, pero se comi\xF3 3. \xBFCu\xE1ntas
+        zanahorias le quedan?"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29534,11 +29539,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5448851827804535357, guid: 6534cbc0eb3da40418cde4a7fc6c1ce3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.86
+      value: -7.58
       objectReference: {fileID: 0}
     - target: {fileID: 5448851827804535357, guid: 6534cbc0eb3da40418cde4a7fc6c1ce3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.51
+      value: -8.06
       objectReference: {fileID: 0}
     - target: {fileID: 5448851827804535357, guid: 6534cbc0eb3da40418cde4a7fc6c1ce3, type: 3}
       propertyPath: m_LocalPosition.z
