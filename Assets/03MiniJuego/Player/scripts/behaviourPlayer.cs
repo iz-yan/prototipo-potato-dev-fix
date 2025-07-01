@@ -5,16 +5,15 @@ public class behaviourPlayer : MonoBehaviour
     [SerializeField]private float velocidad;
     [SerializeField] private Vector2 direccion;
     [SerializeField] private float catchRange = 1f;
-    [SerializeField] private LayerMask animalLayer;
+    [SerializeField] private LayerMask chanchitoLayer;
     [SerializeField] private Animator Animation;
     private bool isRunning=false;
-    private bool isCarryingAnimal = false;
+    private bool isCarryingChanchito = false;
     private Rigidbody2D Rigidbody2D;
-    private bool movementEnabled = true;
 
-    public bool IsCarryingAnimal { get => isCarryingAnimal; set => isCarryingAnimal = value; }
+    public bool IsCarryingChanchito { get => isCarryingChanchito; set => isCarryingChanchito = value; }
     public float Velocidad { get => velocidad; set => velocidad = value; }
-    public bool MovementEnabled { get => movementEnabled; set => movementEnabled = value; }
+
     void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -22,16 +21,9 @@ public class behaviourPlayer : MonoBehaviour
 
     void Update()
     {
-        if (!movementEnabled)
-        {
-            isRunning = false;
-            Animation.SetBool("IsRun", isRunning);
-            return;
-        }
         direccion=new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical")).normalized;
-        if(direccion.x!=0f) isRunning=true;//sirven solo para la animacion
+        if(direccion.x!=0f) isRunning=true;
         else isRunning=false;
-
         if (direccion.x < 0f)
         {
             transform.localScale = new Vector2(-1, 1);
@@ -41,62 +33,49 @@ public class behaviourPlayer : MonoBehaviour
             transform.localScale = new Vector2(1, 1);
         }
         Animation.SetBool("IsRun", isRunning);
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))//logica para agarrar al chanchito
         {
-            TryCatchAnimal(); 
+            TryCatchChanchito();
         }
         else if (Input.GetKeyDown(KeyCode.F))
         {
-            TryReleaseAnimal(); 
+            TryReleaseChanchito();
         }
     }
     private void FixedUpdate()
     {
-        if (movementEnabled)
-        {
-            Rigidbody2D.MovePosition(Rigidbody2D.position + direccion * Time.deltaTime * velocidad);
-        }else
-        {
-            transform.position = transform.position;
-            Rigidbody2D.bodyType= RigidbodyType2D.Kinematic;
-        }
+        Rigidbody2D.MovePosition(Rigidbody2D.position+direccion*Velocidad*Time.fixedDeltaTime);
     }
 
     //para agarrar a los chanchos
 
-    private void TryCatchAnimal()
+    private void TryCatchChanchito()
     {
-        if (IsCarryingAnimal) return;
-
-        Collider2D[] nearbyAnimals = Physics2D.OverlapCircleAll(
+        if (IsCarryingChanchito) return;
+        Collider2D[] nearbyChanchitos = Physics2D.OverlapCircleAll(
             transform.position,
             catchRange,
-            animalLayer.value
+            chanchitoLayer
         );
-        if (nearbyAnimals.Length == 0) return;
-
-        IsCarryingAnimal = true;
-        foreach (Collider2D animalCollider in nearbyAnimals)
+        if (nearbyChanchitos.Length == 0) return;
+        IsCarryingChanchito = true;
+        foreach (Collider2D chanchito in nearbyChanchitos)
         {
-            Animal animal = animalCollider.GetComponent<Animal>();
-            if (animal != null && !animal.IsCaught)
-            {
-                animal.Catch(transform.Find("Manos"));
-                break;
-            }
+            chanchito.GetComponent<BehavioyrChanchito>().Catch(transform.Find("Manos"));
+            break;
         }
     }
 
-    private void TryReleaseAnimal()
+    private void TryReleaseChanchito()
     {
         Transform manos = transform.Find("Manos");
         if (manos == null || manos.childCount == 0) return;
 
-        Animal animal = manos.GetChild(0).GetComponent<Animal>();
-        if (animal != null)
+        BehavioyrChanchito chanchito = manos.GetChild(0).GetComponent<BehavioyrChanchito>();
+        if (chanchito != null)
         {
-            animal.Release();
-            IsCarryingAnimal = false;
+            chanchito.Release();
+            IsCarryingChanchito = false;
         }
     }
 
@@ -105,4 +84,6 @@ public class behaviourPlayer : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, catchRange);
     }
+
+
 }
