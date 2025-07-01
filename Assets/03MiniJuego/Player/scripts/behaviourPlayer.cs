@@ -10,10 +10,11 @@ public class behaviourPlayer : MonoBehaviour
     private bool isRunning=false;
     private bool isCarryingAnimal = false;
     private Rigidbody2D Rigidbody2D;
+    private bool movementEnabled = true;
 
     public bool IsCarryingAnimal { get => isCarryingAnimal; set => isCarryingAnimal = value; }
     public float Velocidad { get => velocidad; set => velocidad = value; }
-
+    public bool MovementEnabled { get => movementEnabled; set => movementEnabled = value; }
     void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -21,9 +22,16 @@ public class behaviourPlayer : MonoBehaviour
 
     void Update()
     {
+        if (!movementEnabled)
+        {
+            isRunning = false;
+            Animation.SetBool("IsRun", isRunning);
+            return;
+        }
         direccion=new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical")).normalized;
         if(direccion.x!=0f) isRunning=true;//sirven solo para la animacion
         else isRunning=false;
+
         if (direccion.x < 0f)
         {
             transform.localScale = new Vector2(-1, 1);
@@ -44,7 +52,10 @@ public class behaviourPlayer : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Rigidbody2D.MovePosition(Rigidbody2D.position + direccion*Time.deltaTime*velocidad);
+        if (movementEnabled)
+        {
+            Rigidbody2D.MovePosition(Rigidbody2D.position + direccion * Time.deltaTime * velocidad);
+        }
     }
 
     //para agarrar a los chanchos

@@ -29,9 +29,22 @@ public class DialogoConNpc : MonoBehaviour
     private bool isDialogueStart = false;
     private bool npcHabla;
     private int indexParrafo = 0;
+    [SerializeField] private ScriptCamera scriptCamera;
+    [SerializeField] private behaviourPlayer playerController;
+    [SerializeField] private Transform cameraTargetPosition;
+
+    [SerializeField] private TMP_Text continuarAviso;
+    private string continuar = "Presione Espacio >>";
+
+    [Header("Sonidos")]
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip acierto;
+    [SerializeField] private AudioClip error;
+    [SerializeField] private float volumen;
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         if (sistemaPreguntas != null && preguntasMatematicas.Length > 0)
         {
             sistemaPreguntas.ConfigurarPreguntas(preguntasMatematicas);
@@ -55,6 +68,7 @@ public class DialogoConNpc : MonoBehaviour
 
     public void EmpezarDialogo()
     {
+        playerController.MovementEnabled=false;
         panelParrafos.SetActive(true);
         aviso.SetActive(false);
         StartCoroutine(MostrarLineas());
@@ -84,6 +98,7 @@ public class DialogoConNpc : MonoBehaviour
         }
         else // Al terminar el diálogo, carga la escena
         {
+            //playerController.MovementEnabled = true;
             panelParrafos.SetActive(false);
             SceneManager.LoadScene("Victoria");
         }
@@ -100,6 +115,7 @@ public class DialogoConNpc : MonoBehaviour
         {
             if (esCorrecta)
             {
+                audioSource.PlayOneShot(acierto, volumen);
                 PlayerScore.Instance.GanarPuntos(10);
                 panelParrafos.SetActive(true);
                 npcHabla = (indexParrafo % 2 == 0);
@@ -107,6 +123,7 @@ public class DialogoConNpc : MonoBehaviour
                 StartCoroutine(MostrarLineas());
                 esperandoRespuesta = false;
             }
+            else audioSource.PlayOneShot(error,volumen);
         });
     }
 
@@ -119,12 +136,14 @@ public class DialogoConNpc : MonoBehaviour
 
     private IEnumerator MostrarLineas()
     {
+        continuarAviso.text= string.Empty;
         textoTMP.text = string.Empty;
         foreach (char c in parrafosDeDialogo[indexParrafo])
         {
             textoTMP.text += c;
             yield return new WaitForSeconds(0.05f);
         }
+        continuarAviso.text = continuar;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

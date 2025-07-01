@@ -3,7 +3,14 @@ using UnityEngine;
 public class CercaVacas : MonoBehaviour
 {
     private bool estaLlenaVacas = false;
-
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip acierto;
+    [SerializeField] private AudioClip error;
+    [SerializeField] private float volumen;
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     public bool EstaLlenaVacas { get => estaLlenaVacas; set => estaLlenaVacas = value; }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,6 +22,7 @@ public class CercaVacas : MonoBehaviour
                 Debug.Log("adiooVaquita");
                 collision.gameObject.SetActive(false);
                 PlayerScore.Instance.GanarPuntos(vaca.Puntaje);
+                audioSource.PlayOneShot(acierto, volumen);
             }
             
         }
@@ -24,6 +32,7 @@ public class CercaVacas : MonoBehaviour
             if (animal != null&&animal.FueAtrapado)
             {
                 PlayerScore.Instance.perderVida();
+                audioSource.PlayOneShot(error, volumen);
                 //Ingresar Sonido de ERror
             }
         }

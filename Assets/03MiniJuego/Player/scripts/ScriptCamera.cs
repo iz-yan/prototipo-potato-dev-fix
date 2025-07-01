@@ -3,24 +3,42 @@ using UnityEngine;
 public class ScriptCamera : MonoBehaviour
 {
     private GameObject player;
-    private Vector3 cameraPosition;
-    private Vector3 offsetZ=new Vector3(0,0,-10);
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private Vector3 offsetZ = new Vector3(0, 0, -10);
+    private bool isFollowingPlayer = true;
+    private Vector3 targetPosition;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-
     }
 
-    // Update is called once per frame
     void Update()
     {
-        cameraPosition = player.transform.position+offsetZ;
-        MoverCamara(cameraPosition);
+        if (isFollowingPlayer)
+        {
+            MoverCamara(player.transform.position + offsetZ);
+        }
+        else
+        {
+            MoverCamara(targetPosition);
+        }
     }
 
-    public void MoverCamara(Vector3 player)
+    public void MoverCamara(Vector3 newPosition)
     {
-        transform.position = player;
+        transform.position = newPosition;
+    }
+
+    // Llama a este método cuando empiece el contador
+    public void SetCameraTargetPosition(Vector3 position)
+    {
+        targetPosition = position + offsetZ;
+        isFollowingPlayer = false;
+    }
+
+    // Llama a este método cuando termine el contador
+    public void ResetCameraToPlayer()
+    {
+        isFollowingPlayer = true;
     }
 }

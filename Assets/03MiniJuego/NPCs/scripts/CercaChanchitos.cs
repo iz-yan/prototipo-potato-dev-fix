@@ -3,9 +3,17 @@ using UnityEngine;
 public class CercaChanchitos : MonoBehaviour
 {
     private bool estaLlenachanchitos= false;
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip acierto;
+    [SerializeField] private AudioClip error;
+    [SerializeField] private float volumen;
 
     public bool EstaLlenachanchitos { get => estaLlenachanchitos; set => estaLlenachanchitos = value; }
 
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Chanchito"))
@@ -16,6 +24,7 @@ public class CercaChanchitos : MonoBehaviour
                 Debug.Log("adiooChanchito");
                 collision.gameObject.SetActive(false);
                 PlayerScore.Instance.GanarPuntos(chanchito.Puntaje);
+                audioSource.PlayOneShot(acierto,volumen);
             }
         }
         else
@@ -24,6 +33,7 @@ public class CercaChanchitos : MonoBehaviour
             if (animal != null&& animal.FueAtrapado)
             {
                 PlayerScore.Instance.perderVida();
+                audioSource.PlayOneShot(error, volumen);
                 //Ingresar Sonido de ERror
             }
         }

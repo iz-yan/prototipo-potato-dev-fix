@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 1779565552233934913}
   - component: {fileID: 8489474177579052862}
   - component: {fileID: 432448957285292144}
-  m_Layer: 0
+  - component: {fileID: 7576049013454431461}
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -126,7 +127,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.003015995, y: -0.4312759}
+  m_Offset: {x: -0.0094332695, y: -0.4312759}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -136,7 +137,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.3923769, y: 0.20887673}
+  m_Size: {x: 0.67622185, y: 0.20887673}
   m_EdgeRadius: 0
 --- !u!50 &1779565552233934913
 Rigidbody2D:
@@ -180,9 +181,10 @@ MonoBehaviour:
   velocidad: 4
   direccion: {x: 0, y: 0}
   catchRange: 0.6
-  chanchitoLayer:
+  animalLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 128
+  Animation: {fileID: 7576049013454431461}
 --- !u!114 &432448957285292144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,6 +199,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textScore: {fileID: 0}
   textLife: {fileID: 0}
+--- !u!95 &7576049013454431461
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6261832822921460504}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cdfc4f465b7b1f84e931a4eed27c35ad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7098859480088686308
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,7 +230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8173283837675321821}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Manos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
