@@ -125,7 +125,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0048066974, y: -0.0048068166}
+  m_Offset: {x: 0.051834524, y: -0.051834643}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -135,7 +135,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.1852335, y: 0.6903864}
+  m_Size: {x: 0.8717145, y: 0.59633076}
   m_EdgeRadius: 0
 --- !u!50 &2930077876382230019
 Rigidbody2D:
@@ -164,7 +164,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &3152844017086736998
+--- !u!114 &2110732276853904773
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,33 +173,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1828160815218324476}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f31b052fb47c4e448c67708d594dd1c, type: 3}
+  m_Script: {fileID: 11500000, guid: f6dec54cf8d4cbe4282467a50c98712d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  changeDirectionTime: 3
-  puntaje: 50
-  sonidoAtrapado: {fileID: 8300000, guid: 96580af51c3e65649b68c0b59965f7ab, type: 3}
-  volumenSonido: 20
---- !u!95 &1410786179341463191
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1828160815218324476}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 66122450b6ce94a4a8bc8ae7f5631900, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  moveSpeed: 4
+  changeDirectionTime: 1

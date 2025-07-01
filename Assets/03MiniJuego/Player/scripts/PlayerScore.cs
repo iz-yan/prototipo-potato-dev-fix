@@ -23,7 +23,7 @@ public class PlayerScore : MonoBehaviour
     }
     void Start()
     {
-        //UpdateUI();
+        UpdateUI();
     }
 
     void UpdateUI()
