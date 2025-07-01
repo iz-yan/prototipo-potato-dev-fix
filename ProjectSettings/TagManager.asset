@@ -29,6 +29,8 @@ TagManager:
   - identificacionPanel
   - autoEnemigo
   - road
+  - Vaca
+  - Pollo
   layers:
   - Default
   - TransparentFX
@@ -39,9 +41,9 @@ TagManager:
   - Chanchitos
   - backgorund
   - ground
-  - 
-  - 
-  - 
+  - AnimalBoundary
+  - player
+  - Animales
   - 
   - 
   - 

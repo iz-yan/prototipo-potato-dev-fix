@@ -12,14 +12,15 @@ GameObject:
   - component: {fileID: 3025163409945064263}
   - component: {fileID: 4841476167783440646}
   - component: {fileID: 2930077876382230019}
-  - component: {fileID: 2110732276853904773}
-  m_Layer: 6
+  - component: {fileID: 3152844017086736998}
+  - component: {fileID: 1410786179341463191}
+  m_Layer: 11
   m_Name: Chanchito
   m_TagString: Chanchito
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &301111123862605317
 Transform:
   m_ObjectHideFlags: 0

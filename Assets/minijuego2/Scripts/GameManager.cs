@@ -7,7 +7,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     public int PuntosTotales { get { return puntosTotales; } }
     private int puntosTotales;
-
+    public GameObject[] confettis; //confetti
+    public Transform[] posicionesConfetti;//confetti
     public int Vidas { get; private set; } = 5;
 
     private bool yaGano = false;
@@ -35,9 +36,13 @@ public class GameManager : MonoBehaviour
             DesbloqueoNiveles.DesbloquearNivel("nivel_3_desbloqueado");
 
             //Mostrar el logro de nivel completado
-            AchievementManager.instance.LogroCompletado("nivel2");
+            //      AchievementManager.instance.LogroCompletado("nivel2");
 
-            StartCoroutine(CargarEscenaConDelay("Victoria", 0.5f));
+            // Instanciar confettis
+
+            ActivarConfetti();
+
+            StartCoroutine(CargarEscenaConDelay("Victoria", 2.5f));
         }
 
     }
@@ -56,10 +61,22 @@ public class GameManager : MonoBehaviour
         {
             yaPerdio = true;
             Debug.Log("¡Juego terminado!");
-            StartCoroutine(CargarEscenaConDelay("GameOver", 0.5f));
+            StartCoroutine(CargarEscenaConDelay("GameOver", 2.5f));
         }
     }
+    private void ActivarConfetti()
+    {
+        for (int i = 0; i < posicionesConfetti.Length && i < confettis.Length; i++)
+        {
+            GameObject nuevo = Instantiate(confettis[i], posicionesConfetti[i].position, posicionesConfetti[i].rotation);
+            ParticleSystem ps = nuevo.GetComponent<ParticleSystem>();
 
+            if (ps != null && !ps.isPlaying)
+            {
+                ps.Play();
+            }
+        }
+    }
     private IEnumerator CargarEscenaConDelay(string nombreEscena, float delay)
     {
         yield return new WaitForSeconds(delay);
