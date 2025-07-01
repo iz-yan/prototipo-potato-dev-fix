@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8489474177579052862}
   - component: {fileID: 432448957285292144}
   - component: {fileID: 7576049013454431461}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8173283837675321821}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Manos
   m_TagString: Untagged
   m_Icon: {fileID: 0}

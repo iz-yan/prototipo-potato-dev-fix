@@ -13053,6 +13053,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: vendedor
       objectReference: {fileID: 0}
+    - target: {fileID: 762432545615551734, guid: f2fb4114dc34e0142a799e7a4e7e14d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3812519210917920264, guid: f2fb4114dc34e0142a799e7a4e7e14d6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2239272182224157158, guid: 6b3d191799012e2438cf0c75264eccb7, type: 3}
     - target: {fileID: 4841976028894696430, guid: f2fb4114dc34e0142a799e7a4e7e14d6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.86
@@ -13093,6 +13101,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4894195826609321575, guid: f2fb4114dc34e0142a799e7a4e7e14d6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438708512414644641, guid: f2fb4114dc34e0142a799e7a4e7e14d6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6324976912783438936, guid: f2fb4114dc34e0142a799e7a4e7e14d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888776306240258135, guid: f2fb4114dc34e0142a799e7a4e7e14d6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6131185593638097393, guid: f2e355ef25b82c344a156210f2e42a9d, type: 3}
     - target: {fileID: 6942500759896768525, guid: f2fb4114dc34e0142a799e7a4e7e14d6, type: 3}
       propertyPath: scriptCamera
       value: 
@@ -15021,7 +15045,7 @@ GameObject:
   m_Component:
   - component: {fileID: 871314901}
   - component: {fileID: 871314900}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: limiteAnimales
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29444,6 +29468,10 @@ PrefabInstance:
       value: Chanchito
       objectReference: {fileID: 0}
     - target: {fileID: 1828160815218324476, guid: 2271edfc9e06d5846b5a8ea1437f5526, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828160815218324476, guid: 2271edfc9e06d5846b5a8ea1437f5526, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -29505,6 +29533,10 @@ PrefabInstance:
       value: Pollo
       objectReference: {fileID: 0}
     - target: {fileID: 7608695123111838457, guid: ce38466b8d07a3d4abfbab8a3a34f891, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608695123111838457, guid: ce38466b8d07a3d4abfbab8a3a34f891, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -29529,21 +29561,13 @@ PrefabInstance:
       propertyPath: textScore
       value: 
       objectReference: {fileID: 1084953505}
-    - target: {fileID: 1711982597575076045, guid: 6534cbc0eb3da40418cde4a7fc6c1ce3, type: 3}
-      propertyPath: m_Size.x
-      value: 0.67622185
-      objectReference: {fileID: 0}
-    - target: {fileID: 1711982597575076045, guid: 6534cbc0eb3da40418cde4a7fc6c1ce3, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.0094332695
-      objectReference: {fileID: 0}
     - target: {fileID: 5448851827804535357, guid: 6534cbc0eb3da40418cde4a7fc6c1ce3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.58
+      value: 5.58
       objectReference: {fileID: 0}
     - target: {fileID: 5448851827804535357, guid: 6534cbc0eb3da40418cde4a7fc6c1ce3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.06
+      value: -1.13
       objectReference: {fileID: 0}
     - target: {fileID: 5448851827804535357, guid: 6534cbc0eb3da40418cde4a7fc6c1ce3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -29583,19 +29607,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6261832822921460504, guid: 6534cbc0eb3da40418cde4a7fc6c1ce3, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7098859480088686308, guid: 6534cbc0eb3da40418cde4a7fc6c1ce3, type: 3}
       propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8489474177579052862, guid: 6534cbc0eb3da40418cde4a7fc6c1ce3, type: 3}
-      propertyPath: Animation
-      value: 
-      objectReference: {fileID: 7302129871163028413}
-    - target: {fileID: 8489474177579052862, guid: 6534cbc0eb3da40418cde4a7fc6c1ce3, type: 3}
-      propertyPath: animalLayer.m_Bits
-      value: 128
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29605,11 +29621,6 @@ PrefabInstance:
 --- !u!61 &7302129871163028412 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 1711982597575076045, guid: 6534cbc0eb3da40418cde4a7fc6c1ce3, type: 3}
-  m_PrefabInstance: {fileID: 7302129871163028411}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &7302129871163028413 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7576049013454431461, guid: 6534cbc0eb3da40418cde4a7fc6c1ce3, type: 3}
   m_PrefabInstance: {fileID: 7302129871163028411}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &7302129871163028415 stripped
@@ -29674,6 +29685,10 @@ PrefabInstance:
     - target: {fileID: 3494868945466207078, guid: 3dcf469623b531941870ffbce058e194, type: 3}
       propertyPath: m_Name
       value: Vaca
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494868945466207078, guid: 3dcf469623b531941870ffbce058e194, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3494868945466207078, guid: 3dcf469623b531941870ffbce058e194, type: 3}
       propertyPath: m_IsActive

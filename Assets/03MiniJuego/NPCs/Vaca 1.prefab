@@ -14,13 +14,13 @@ GameObject:
   - component: {fileID: 570400249388137280}
   - component: {fileID: 1828848741162977146}
   - component: {fileID: 7451343867867601868}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Vaca 1
   m_TagString: Vaca
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1675042413236916741
 Transform:
   m_ObjectHideFlags: 0

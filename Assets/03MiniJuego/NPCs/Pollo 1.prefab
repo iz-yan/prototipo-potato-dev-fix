@@ -14,13 +14,13 @@ GameObject:
   - component: {fileID: 8945669367113676503}
   - component: {fileID: 7485678009027604995}
   - component: {fileID: 8898614456680999199}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Pollo 1
   m_TagString: Pollo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5697212004847337827
 Transform:
   m_ObjectHideFlags: 0
