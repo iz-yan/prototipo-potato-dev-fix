@@ -37,6 +37,7 @@ TagManager:
   - Animales
   - AnimalBoundary
   - player
+
   - 
   - 
   - 
@@ -62,6 +63,12 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Camino
+    uniqueID: 284608897
+    locked: 0
+  - name: Personaje
+    uniqueID: 1797857733
     locked: 0
   m_RenderingLayers:
   - Default
