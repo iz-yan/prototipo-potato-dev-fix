@@ -84,7 +84,7 @@ public class DialogoConNpc : MonoBehaviour
         {
             indexParrafo++;
 
-            if (indexParrafo == 2 || indexParrafo == 4) // Preguntas en líneas específicas
+            if (indexParrafo == 2 || indexParrafo == 4 || indexParrafo == 6 || indexParrafo == 8 || indexParrafo == 10) // Preguntas en líneas específicas
             {
                 panelParrafos.SetActive(false);
                 MostrarPregunta();
@@ -151,7 +151,7 @@ public class DialogoConNpc : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             aviso.SetActive(true);
-            if (avisoProximidad != null) avisoProximidad.SetActive(false);
+            if (avisoProximidad != null) avisoProximidad.SetActive(true);
             isPlayer = true;
         }
     }

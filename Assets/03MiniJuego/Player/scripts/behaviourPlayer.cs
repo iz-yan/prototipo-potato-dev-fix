@@ -55,6 +55,10 @@ public class behaviourPlayer : MonoBehaviour
         if (movementEnabled)
         {
             Rigidbody2D.MovePosition(Rigidbody2D.position + direccion * Time.deltaTime * velocidad);
+        }else
+        {
+            transform.position = transform.position;
+            Rigidbody2D.bodyType= RigidbodyType2D.Kinematic;
         }
     }
 

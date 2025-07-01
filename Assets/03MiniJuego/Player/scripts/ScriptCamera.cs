@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ScriptCamera : MonoBehaviour
 {
-    private GameObject player;
+    [SerializeField ]private GameObject player;
     private Vector3 offsetZ = new Vector3(0, 0, -10);
     private bool isFollowingPlayer = true;
     private Vector3 targetPosition;

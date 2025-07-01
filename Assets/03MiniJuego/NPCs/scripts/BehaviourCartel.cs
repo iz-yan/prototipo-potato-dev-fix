@@ -21,6 +21,7 @@ public class BehaviourCartel : MonoBehaviour
 
     [SerializeField] private TMP_Text continuarAviso;
     private string continuar = "Presione Espacio >>";
+    public GameObject barreraPlayer;
 
     public bool AnimalesLiberados { get => animalesLiberados; set => animalesLiberados = value; }
 
@@ -84,8 +85,11 @@ public class BehaviourCartel : MonoBehaviour
 
     private IEnumerator ContadorRegresivo()
     {
+
         playerController.MovementEnabled = false;
         contador.gameObject.SetActive(true);
+        playerController.transform.position= cameraTargetPosition.position;
+        scriptCamera.SetCameraTargetPosition(cameraTargetPosition.position);
         // Mostrar "3"
         contador.text = "3";
         yield return new WaitForSeconds(1f);
@@ -104,7 +108,8 @@ public class BehaviourCartel : MonoBehaviour
             animal.SetActive(true);
         }
         yield return new WaitForSeconds(0.5f);
-        scriptCamera.ResetCameraToPlayer();
+        //scriptCamera.ResetCameraToPlayer();
+        barreraPlayer.SetActive(true);
         playerController.MovementEnabled = true;
         contador.gameObject.SetActive(false);
         animalesLiberados = true;

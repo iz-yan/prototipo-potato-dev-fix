@@ -19,6 +19,8 @@ public abstract class Animal : MonoBehaviour
     [SerializeField] protected float volumenSonido = 1f;
     protected AudioSource audioSource;
 
+
+
     public int Puntaje => puntaje;
     public bool IsCaught { get => isCaught; set => isCaught = value; }
     public bool FueAtrapado { get => fueAtrapado; set => fueAtrapado = value; }
@@ -99,4 +101,5 @@ public abstract class Animal : MonoBehaviour
             PickNewDirection();
         }
     }
+
 }
