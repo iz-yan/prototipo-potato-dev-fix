@@ -29,7 +29,10 @@ public class BehaviourNPC : MonoBehaviour
     }
 
     [SerializeField] private Pregunta[] preguntas;
-
+    //AUDIOS
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip acierto;
+    [SerializeField] private AudioClip error;
     void Start()
     {
         for (int i = 0; i < botonesRespuestas.Length; i++)
@@ -39,7 +42,9 @@ public class BehaviourNPC : MonoBehaviour
             botonesRespuestas[i].onClick.AddListener(() => ResponderPregunta(index));
         }
 
-        panelPreguntas.SetActive(false);
+        panelPreguntas.SetActive(false);        
+        //Audio
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -139,6 +144,7 @@ public class BehaviourNPC : MonoBehaviour
 
         for (int i = 0; i < botonesRespuestas.Length; i++)
         {
+            botonesRespuestas[i].interactable = true;
             botonesRespuestas[i].GetComponentInChildren<TMP_Text>().text = preguntas[numPregunta].respuestas[i];
         }
     }
@@ -150,9 +156,9 @@ public class BehaviourNPC : MonoBehaviour
         if (respuestaIndex != preguntas[preguntaActual].respuestaCorrecta)
         {
             Debug.Log("Respuesta incorrecta!");
-
+            botonPresionado.interactable = false;
             botonPresionado.image.color = Color.red;
-
+            audioSource.PlayOneShot(error);
             PlayerScore.Instance.perderVida();
 
             return;
@@ -161,7 +167,7 @@ public class BehaviourNPC : MonoBehaviour
         {
             Debug.Log("Respuesta correcta!");
             PlayerScore.Instance.GanarPuntos(puntosRespuestaCorrecta);
-
+            audioSource.PlayOneShot(acierto);
             foreach (var boton in botonesRespuestas)
             {
                 boton.image.color = Color.white;

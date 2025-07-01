@@ -6,8 +6,14 @@ public class behaviourPlayer : MonoBehaviour
     [SerializeField] private Vector2 direccion;
     [SerializeField] private float catchRange = 1f;
     [SerializeField] private LayerMask chanchitoLayer;
+    [SerializeField] private Animator Animation;
+    private bool isRunning=false;
     private bool isCarryingChanchito = false;
     private Rigidbody2D Rigidbody2D;
+
+    public bool IsCarryingChanchito { get => isCarryingChanchito; set => isCarryingChanchito = value; }
+    public float Velocidad { get => velocidad; set => velocidad = value; }
+
     void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -16,15 +22,17 @@ public class behaviourPlayer : MonoBehaviour
     void Update()
     {
         direccion=new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical")).normalized;
-        if (direccion.x<0)
+        if(direccion.x!=0f) isRunning=true;
+        else isRunning=false;
+        if (direccion.x < 0f)
         {
             transform.localScale = new Vector2(-1, 1);
         }
-        else if  (direccion.x > 0)
+        else if (direccion.x > 0f)
         {
             transform.localScale = new Vector2(1, 1);
         }
-
+        Animation.SetBool("IsRun", isRunning);
         if (Input.GetKeyDown(KeyCode.Space))//logica para agarrar al chanchito
         {
             TryCatchChanchito();
@@ -36,21 +44,21 @@ public class behaviourPlayer : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Rigidbody2D.MovePosition(Rigidbody2D.position+direccion*velocidad*Time.fixedDeltaTime);
+        Rigidbody2D.MovePosition(Rigidbody2D.position+direccion*Velocidad*Time.fixedDeltaTime);
     }
 
     //para agarrar a los chanchos
 
     private void TryCatchChanchito()
     {
-        if (isCarryingChanchito) return;
+        if (IsCarryingChanchito) return;
         Collider2D[] nearbyChanchitos = Physics2D.OverlapCircleAll(
             transform.position,
             catchRange,
             chanchitoLayer
         );
         if (nearbyChanchitos.Length == 0) return;
-        isCarryingChanchito = true;
+        IsCarryingChanchito = true;
         foreach (Collider2D chanchito in nearbyChanchitos)
         {
             chanchito.GetComponent<BehavioyrChanchito>().Catch(transform.Find("Manos"));
@@ -67,7 +75,7 @@ public class behaviourPlayer : MonoBehaviour
         if (chanchito != null)
         {
             chanchito.Release();
-            isCarryingChanchito = false;
+            IsCarryingChanchito = false;
         }
     }
 
