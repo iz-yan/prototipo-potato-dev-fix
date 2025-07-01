@@ -23,9 +23,12 @@ TagManager:
   - item-metal
   - contenedor-metal
   - Chanchito
-  - Animal
-  - Vaca
-  - Pollo
+  - auto
+  - AltoEnNombreDeLaLey
+  - obstaculo
+  - identificacionPanel
+  - autoEnemigo
+  - road
   layers:
   - Default
   - TransparentFX
@@ -34,10 +37,9 @@ TagManager:
   - Water
   - UI
   - Chanchitos
-  - Animales
-  - AnimalBoundary
-  - player
-
+  - backgorund
+  - ground
+  - 
   - 
   - 
   - 
